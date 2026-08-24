@@ -1,0 +1,24 @@
+{
+  "templates": [
+    "{defender}不退反进，{def_skill}迎面而上，两股力量轰然相撞！",
+    "{defender}瞳孔骤缩——{moment}之间，他只有一个选择。",
+    "{defender}似乎早已看穿了{skill}的破绽，只是微微侧头，{weapon}贴着他的耳朵擦过。",
+    "{defender}忽然闭上了眼睛，不是放弃，是以耳代目。",
+    "{defender}一脚跺在{terrain}上，{debris}里，{attacker}的视线被挡了{moment}。",
+    "{defender}避无可避，却双手交叉护在胸前，硬吃了这一记{skill}。",
+    "{defender}的应对漂亮得不像临时反应，仿佛他等这一记{skill}已经等了很久。",
+    "{defender}丝毫不慌，{def_skill}迎上，两股力量轰然相撞！",
+    "{defender}早有防备，{treasure}光华一闪，竟将那{thing}尽数{verb}。",
+    "{defender}不退反进，{def_skill}迎面而上，两股力量轰然相撞。",
+    "{defender}似乎早看穿了{skill}的破绽，只是微微侧头，{weapon}贴耳擦过。",
+    "{defender}忽然闭眼，不是放弃，是以耳代目，仅凭风声判断{attacker}的方位。",
+    "{defender}一脚跺在{terrain}上，{debris}遮住视线的一瞬，{def_skill}已经{action}。",
+    "{defender}避无可避，却双手交叉护在胸前，硬吃了这一记{skill}，骨骼{shake}。",
+    "{defender}的应对漂亮得不像临时反应，仿佛等这一记{skill}等了很久。",
+    "{defender}面色微变，急使{def_skill}，堪堪{verb}住这致命一击。",
+    "汉语描写词汇",
+    "重排本",
+    "模板",
+    "消息"
+  ]
+}

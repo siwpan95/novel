@@ -1,0 +1,835 @@
+# 词库增长日志（滚动基线）
+
+> 由「词库每日联网扩充」自动化维护。每次运行追加一条记录：处理库数、总新增条目、
+> 体积变化、滚动健康校验结论（去重异常 / 旋转词污染）。本日志即新的可追踪基线。
+
+## 2026-08-10 08:08（手动验证运行 · CAP=60 MAXR=10 搜索=42）
+- 处理内容库：39 个；检索失败：3 个
+- 总新增条目：**10948**；体积 40.34MB → 40.64MB
+- 健康校验：去重异常 2 · 旋转词污染 0 → 存在偏差 ❌
+  - genre_terms/creator_ruins_terms.json: +300 条 (1.074→1.080MB) 
+  - genre_terms/cthulhu_terms.json: +300 条 (1.065→1.070MB) 
+  - genre_terms/cultivation_terms.json: +360 条 (1.053→1.060MB) 
+  - genre_terms/cyberpunk_terms.json: +300 条 (1.066→1.073MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +300 条 (1.058→1.064MB) 
+  - genre_terms/high_civ_lab_terms.json: +300 条 (1.056→1.063MB) 
+  - genre_terms/infinite_flow_terms.json: +300 条 (1.075→1.081MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +360 条 (1.079→1.086MB) 
+  - genre_terms/magic_academy_terms.json: +300 条 (1.075→1.080MB) 
+  - genre_terms/mech_divinity_terms.json: +300 条 (1.065→1.071MB) 
+  - genre_terms/modern_china_terms.json: +300 条 (1.068→1.074MB) 
+  - genre_terms/post_apocalyptic_terms.json: +300 条 (1.060→1.067MB) 
+  - genre_terms/ragnarok_terms.json: +360 条 (1.071→1.077MB) 
+  - genre_terms/scifi_terms.json: +300 条 (1.065→1.071MB) 
+  - genre_terms/steampunk_terms.json: +0 条 (1.074→1.074MB) 检索失败:URLError: <urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或
+  - genre_terms/sword_magic_terms.json: +300 条 (1.041→1.048MB) 
+  - genre_terms/wuxia_terms.json: +360 条 (1.062→1.069MB) 
+  - narrative/beat_narratives.json: +0 条 (1.060→1.060MB) 检索失败:URLError: <urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或
+  - narrative/chapter_enrichments.json: +350 条 (1.059→1.081MB) 
+  - narrative/foreshadowing_pool.json: +1 条 (1.068→1.068MB) 
+  - narrative/hook_templates.json: +180 条 (1.026→1.036MB) 
+  - narrative/player_chaos.json: +198 条 (1.070→1.081MB) 
+  - narrative/quality_fragments.json: +127 条 (1.062→1.068MB) 
+  - narrative/scene_beats.json: +0 条 (1.049→1.049MB) 检索失败:URLError: <urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或
+  - narrative/truth_reveals.json: +211 条 (1.016→1.030MB) 
+  - vocab/adjectives.json: +240 条 (1.084→1.089MB) 
+  - vocab/body_parts.json: +1402 条 (1.085→1.113MB) 
+  - vocab/equipment.json: +480 条 (1.085→1.095MB) 
+  - vocab/locations.json: +420 条 (1.085→1.093MB) 
+  - voice/personality_tags.json: +7 条 (1.055→1.055MB) 
+  - voice/personality_voice.json: +506 条 (1.064→1.090MB) 
+  - world/scene_locations.json: +1140 条 (1.084→1.108MB) 
+  - world/wanjie_context.json: +60 条 (1.029→1.032MB) 
+  - world/world_openings.json: +586 条 (1.063→1.090MB) 
+  - 检索失败: genre_terms/steampunk_terms.json:URLError: <urlopen error [WinError 10060; narrative/beat_narratives.json:URLError: <urlopen error [WinError 10060; narrative/scene_beats.json:URLError: <urlopen error [WinError 10060
+
+## 2026-08-10 08:38（手动验证运行 · CAP=60 MAXR=10 搜索=3）
+- 处理内容库：3 个；检索失败：0 个
+- 总新增条目：**745**；体积 3.18MB → 3.22MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/steampunk_terms.json: +360 条 (1.074→1.082MB) 
+  - narrative/beat_narratives.json: +293 条 (1.060→1.078MB) 
+  - narrative/scene_beats.json: +92 条 (1.049→1.056MB) 
+
+## 2026-08-11 02:59（手动验证运行 · CAP=200 MAXR=12 搜索=42）
+- 处理内容库：42 个；检索失败：0 个
+- 总新增条目：**27659**；体积 40.67MB → 41.38MB
+- 健康校验：去重异常 2 · 旋转词污染 0 → 存在偏差 ❌
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.080→1.101MB) 
+  - genre_terms/cthulhu_terms.json: +1000 条 (1.070→1.092MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.060→1.086MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.073→1.093MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +837 条 (1.064→1.082MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.063→1.083MB) 
+  - genre_terms/infinite_flow_terms.json: +1000 条 (1.081→1.103MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +934 条 (1.086→1.106MB) 
+  - genre_terms/magic_academy_terms.json: +1000 条 (1.080→1.100MB) 
+  - genre_terms/mech_divinity_terms.json: +1000 条 (1.071→1.092MB) 
+  - genre_terms/modern_china_terms.json: +1000 条 (1.074→1.095MB) 
+  - genre_terms/post_apocalyptic_terms.json: +1000 条 (1.067→1.088MB) 
+  - genre_terms/ragnarok_terms.json: +1031 条 (1.077→1.100MB) 
+  - genre_terms/scifi_terms.json: +1000 条 (1.071→1.093MB) 
+  - genre_terms/steampunk_terms.json: +1200 条 (1.082→1.107MB) 
+  - genre_terms/sword_magic_terms.json: +958 条 (1.048→1.068MB) 
+  - genre_terms/wuxia_terms.json: +1200 条 (1.069→1.095MB) 
+  - narrative/beat_narratives.json: +362 条 (1.078→1.100MB) 
+  - narrative/chapter_enrichments.json: +640 条 (1.081→1.114MB) 
+  - narrative/foreshadowing_pool.json: +1 条 (1.068→1.068MB) 
+  - narrative/hook_templates.json: +600 条 (1.036→1.067MB) 
+  - narrative/player_chaos.json: +266 条 (1.081→1.098MB) 
+  - narrative/quality_fragments.json: +218 条 (1.068→1.081MB) 
+  - narrative/scene_beats.json: +236 条 (1.056→1.071MB) 
+  - narrative/truth_reveals.json: +151 条 (1.030→1.039MB) 
+  - vocab/adjectives.json: +800 条 (1.089→1.106MB) 
+  - vocab/body_parts.json: +1416 条 (1.113→1.142MB) 
+  - vocab/equipment.json: +1519 条 (1.095→1.126MB) 
+  - vocab/locations.json: +923 条 (1.093→1.113MB) 
+  - voice/personality_tags.json: +8 条 (1.055→1.055MB) 
+  - voice/personality_voice.json: +418 条 (1.090→1.115MB) 
+  - world/scene_locations.json: +2089 条 (1.108→1.153MB) 
+  - world/wanjie_context.json: +200 条 (1.032→1.041MB) 
+  - world/world_openings.json: +452 条 (1.090→1.112MB) 
+
+> （运维 · 2026-08-11 22:41）原地去重清理：定位 `genre_terms/magic_academy_terms.json` 内 `creature_terms`(6325→6324) 与 `item_terms`(6322→6321) 各 1 处精确重复（"蛇怪"/"隐身衣"），保留首次出现、顺序不变，原子写并备份至 `word_banks/.backup_originals/`。复扫 51 库：去重异常 0 · 旋转词污染 0。下次引擎校验应转 ✅，无需重置基线/哈希。
+
+## 2026-08-12 03:00（手动验证运行 · CAP=200 MAXR=12 搜索=42）
+- 处理内容库：42 个；检索失败：0 个
+- 总新增条目：**27584**；体积 41.38MB → 42.07MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.101→1.122MB) 
+  - genre_terms/cthulhu_terms.json: +1000 条 (1.092→1.113MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.086→1.110MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.093→1.114MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +1000 条 (1.082→1.104MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.083→1.104MB) 
+  - genre_terms/infinite_flow_terms.json: +1000 条 (1.103→1.124MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +1006 条 (1.106→1.126MB) 
+  - genre_terms/magic_academy_terms.json: +1000 条 (1.100→1.120MB) 
+  - genre_terms/mech_divinity_terms.json: +1000 条 (1.092→1.113MB) 
+  - genre_terms/modern_china_terms.json: +955 条 (1.095→1.115MB) 
+  - genre_terms/post_apocalyptic_terms.json: +1000 条 (1.088→1.110MB) 
+  - genre_terms/ragnarok_terms.json: +1200 条 (1.100→1.125MB) 
+  - genre_terms/scifi_terms.json: +1000 条 (1.093→1.115MB) 
+  - genre_terms/steampunk_terms.json: +1200 条 (1.107→1.133MB) 
+  - genre_terms/sword_magic_terms.json: +1000 条 (1.068→1.090MB) 
+  - genre_terms/wuxia_terms.json: +1200 条 (1.095→1.120MB) 
+  - narrative/beat_narratives.json: +453 条 (1.100→1.127MB) 
+  - narrative/chapter_enrichments.json: +515 条 (1.114→1.143MB) 
+  - narrative/foreshadowing_pool.json: +1 条 (1.068→1.068MB) 
+  - narrative/hook_templates.json: +195 条 (1.067→1.077MB) 
+  - narrative/player_chaos.json: +207 条 (1.098→1.112MB) 
+  - narrative/quality_fragments.json: +229 条 (1.081→1.095MB) 
+  - narrative/scene_beats.json: +239 条 (1.071→1.085MB) 
+  - narrative/truth_reveals.json: +190 条 (1.039→1.049MB) 
+  - vocab/adjectives.json: +800 条 (1.106→1.122MB) 
+  - vocab/body_parts.json: +915 条 (1.142→1.160MB) 
+  - vocab/equipment.json: +1600 条 (1.126→1.162MB) 
+  - vocab/locations.json: +1372 条 (1.113→1.143MB) 
+  - voice/personality_tags.json: +9 条 (1.055→1.055MB) 
+  - voice/personality_voice.json: +638 条 (1.115→1.152MB) 
+  - world/scene_locations.json: +1827 条 (1.153→1.191MB) 
+  - world/wanjie_context.json: +200 条 (1.041→1.050MB) 
+  - world/world_openings.json: +433 条 (1.112→1.132MB) 
+
+## 2026-08-13 02:28（手动验证运行 · CAP=200 MAXR=12 搜索=42）
+- 处理内容库：42 个；检索失败：0 个
+- 总新增条目：**27112**；体积 42.07MB → 42.77MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.122→1.144MB) 
+  - genre_terms/cthulhu_terms.json: +1000 条 (1.113→1.134MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.110→1.135MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.114→1.136MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +942 条 (1.104→1.125MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.104→1.126MB) 
+  - genre_terms/infinite_flow_terms.json: +1000 条 (1.124→1.146MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +1132 条 (1.126→1.150MB) 
+  - genre_terms/magic_academy_terms.json: +1000 条 (1.120→1.140MB) 
+  - genre_terms/mech_divinity_terms.json: +1000 条 (1.113→1.134MB) 
+  - genre_terms/modern_china_terms.json: +543 条 (1.115→1.126MB) 
+  - genre_terms/post_apocalyptic_terms.json: +1000 条 (1.110→1.132MB) 
+  - genre_terms/ragnarok_terms.json: +1200 条 (1.125→1.151MB) 
+  - genre_terms/scifi_terms.json: +1000 条 (1.115→1.137MB) 
+  - genre_terms/steampunk_terms.json: +1200 条 (1.133→1.158MB) 
+  - genre_terms/sword_magic_terms.json: +1000 条 (1.090→1.111MB) 
+  - genre_terms/wuxia_terms.json: +1200 条 (1.120→1.146MB) 
+  - narrative/beat_narratives.json: +383 条 (1.127→1.148MB) 
+  - narrative/chapter_enrichments.json: +422 条 (1.143→1.168MB) 
+  - narrative/foreshadowing_pool.json: +2 条 (1.068→1.068MB) 
+  - narrative/hook_templates.json: +317 条 (1.077→1.093MB) 
+  - narrative/player_chaos.json: +460 条 (1.112→1.136MB) 
+  - narrative/quality_fragments.json: +264 条 (1.095→1.108MB) 
+  - narrative/scene_beats.json: +243 条 (1.085→1.101MB) 
+  - narrative/truth_reveals.json: +169 条 (1.049→1.058MB) 
+  - vocab/adjectives.json: +800 条 (1.122→1.139MB) 
+  - vocab/body_parts.json: +926 条 (1.160→1.179MB) 
+  - vocab/equipment.json: +1600 条 (1.162→1.195MB) 
+  - vocab/locations.json: +1251 条 (1.143→1.170MB) 
+  - voice/personality_tags.json: +10 条 (1.055→1.055MB) 
+  - voice/personality_voice.json: +724 条 (1.152→1.193MB) 
+  - world/scene_locations.json: +1397 条 (1.191→1.221MB) 
+  - world/wanjie_context.json: +200 条 (1.050→1.057MB) 
+  - world/world_openings.json: +527 条 (1.132→1.158MB) 
+
+## 2026-08-13 03:31（手动验证运行 · CAP=200 MAXR=12 搜索=42）
+- 处理内容库：42 个；检索失败：0 个
+- 总新增条目：**27877**；体积 42.77MB → 43.48MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.144→1.165MB) 
+  - genre_terms/cthulhu_terms.json: +1000 条 (1.134→1.155MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.135→1.160MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.136→1.156MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +1000 条 (1.125→1.146MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.126→1.148MB) 
+  - genre_terms/infinite_flow_terms.json: +960 条 (1.146→1.167MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +1200 条 (1.150→1.175MB) 
+  - genre_terms/magic_academy_terms.json: +1000 条 (1.140→1.161MB) 
+  - genre_terms/mech_divinity_terms.json: +1000 条 (1.134→1.156MB) 
+  - genre_terms/modern_china_terms.json: +1000 条 (1.126→1.147MB) 
+  - genre_terms/post_apocalyptic_terms.json: +1000 条 (1.132→1.153MB) 
+  - genre_terms/ragnarok_terms.json: +1200 条 (1.151→1.177MB) 
+  - genre_terms/scifi_terms.json: +1000 条 (1.137→1.158MB) 
+  - genre_terms/steampunk_terms.json: +1200 条 (1.158→1.182MB) 
+  - genre_terms/sword_magic_terms.json: +906 条 (1.111→1.130MB) 
+  - genre_terms/wuxia_terms.json: +1200 条 (1.146→1.171MB) 
+  - narrative/beat_narratives.json: +401 条 (1.148→1.170MB) 
+  - narrative/chapter_enrichments.json: +294 条 (1.168→1.186MB) 
+  - narrative/foreshadowing_pool.json: +2 条 (1.068→1.068MB) 
+  - narrative/hook_templates.json: +327 条 (1.093→1.109MB) 
+  - narrative/player_chaos.json: +406 条 (1.136→1.159MB) 
+  - narrative/quality_fragments.json: +290 条 (1.108→1.124MB) 
+  - narrative/scene_beats.json: +247 条 (1.101→1.117MB) 
+  - narrative/truth_reveals.json: +150 条 (1.058→1.066MB) 
+  - vocab/adjectives.json: +800 条 (1.139→1.156MB) 
+  - vocab/body_parts.json: +1143 条 (1.179→1.202MB) 
+  - vocab/equipment.json: +1600 条 (1.195→1.228MB) 
+  - vocab/locations.json: +1220 条 (1.170→1.196MB) 
+  - voice/personality_tags.json: +11 条 (1.055→1.055MB) 
+  - voice/personality_voice.json: +700 条 (1.193→1.233MB) 
+  - world/scene_locations.json: +1605 条 (1.221→1.256MB) 
+  - world/wanjie_context.json: +200 条 (1.057→1.062MB) 
+  - world/world_openings.json: +615 条 (1.158→1.192MB) 
+
+## 2026-08-13 04:31（手动验证运行 · CAP=200 MAXR=12 搜索=42）
+- 处理内容库：42 个；检索失败：0 个
+- 总新增条目：**26359**；体积 43.48MB → 44.17MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.165→1.186MB) 
+  - genre_terms/cthulhu_terms.json: +1000 条 (1.155→1.177MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.160→1.184MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.156→1.178MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +1000 条 (1.146→1.169MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.148→1.169MB) 
+  - genre_terms/infinite_flow_terms.json: +1000 条 (1.167→1.189MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +651 条 (1.175→1.189MB) 
+  - genre_terms/magic_academy_terms.json: +1000 条 (1.161→1.182MB) 
+  - genre_terms/mech_divinity_terms.json: +724 条 (1.156→1.171MB) 
+  - genre_terms/modern_china_terms.json: +1000 条 (1.147→1.168MB) 
+  - genre_terms/post_apocalyptic_terms.json: +1000 条 (1.153→1.176MB) 
+  - genre_terms/ragnarok_terms.json: +1200 条 (1.177→1.203MB) 
+  - genre_terms/scifi_terms.json: +1000 条 (1.158→1.180MB) 
+  - genre_terms/steampunk_terms.json: +1200 条 (1.182→1.208MB) 
+  - genre_terms/sword_magic_terms.json: +1000 条 (1.130→1.151MB) 
+  - genre_terms/wuxia_terms.json: +1200 条 (1.171→1.195MB) 
+  - narrative/beat_narratives.json: +530 条 (1.170→1.201MB) 
+  - narrative/chapter_enrichments.json: +582 条 (1.186→1.217MB) 
+  - narrative/foreshadowing_pool.json: +2 条 (1.068→1.069MB) 
+  - narrative/hook_templates.json: +311 条 (1.109→1.127MB) 
+  - narrative/player_chaos.json: +234 条 (1.159→1.174MB) 
+  - narrative/quality_fragments.json: +308 条 (1.124→1.140MB) 
+  - narrative/scene_beats.json: +143 条 (1.117→1.127MB) 
+  - narrative/truth_reveals.json: +232 条 (1.066→1.078MB) 
+  - vocab/adjectives.json: +800 条 (1.156→1.173MB) 
+  - vocab/body_parts.json: +1119 条 (1.202→1.225MB) 
+  - vocab/equipment.json: +1600 条 (1.228→1.262MB) 
+  - vocab/locations.json: +545 条 (1.196→1.207MB) 
+  - voice/personality_tags.json: +12 条 (1.055→1.056MB) 
+  - voice/personality_voice.json: +547 条 (1.233→1.264MB) 
+  - world/scene_locations.json: +1401 条 (1.256→1.285MB) 
+  - world/wanjie_context.json: +70 条 (1.062→1.066MB) 
+  - world/world_openings.json: +748 条 (1.192→1.228MB) 
+
+## 2026-08-13 05:33（手动验证运行 · CAP=200 MAXR=12 搜索=56）
+- 处理内容库：56 个；检索失败：0 个
+- 总新增条目：**26949**；体积 44.28MB → 44.97MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.186→1.207MB) 
+  - genre_terms/cthulhu_terms.json: +1000 条 (1.177→1.199MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.184→1.210MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.178→1.199MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +872 条 (1.169→1.188MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.169→1.189MB) 
+  - genre_terms/infinite_flow_terms.json: +1000 条 (1.189→1.211MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +1192 条 (1.189→1.215MB) 
+  - genre_terms/magic_academy_terms.json: +1000 条 (1.182→1.204MB) 
+  - genre_terms/mech_divinity_terms.json: +1000 条 (1.171→1.193MB) 
+  - genre_terms/modern_china_terms.json: +893 条 (1.168→1.187MB) 
+  - genre_terms/post_apocalyptic_terms.json: +1000 条 (1.176→1.198MB) 
+  - genre_terms/ragnarok_terms.json: +1200 条 (1.203→1.229MB) 
+  - genre_terms/scifi_terms.json: +1000 条 (1.180→1.203MB) 
+  - genre_terms/steampunk_terms.json: +1200 条 (1.208→1.233MB) 
+  - genre_terms/sword_magic_terms.json: +914 条 (1.151→1.170MB) 
+  - genre_terms/wuxia_terms.json: +1200 条 (1.195→1.218MB) 
+  - narrative/beat_narratives.json: +453 条 (1.201→1.228MB) 
+  - narrative/chapter_enrichments.json: +640 条 (1.217→1.251MB) 
+  - narrative/foreshadowing_pool.json: +2 条 (1.069→1.069MB) 
+  - narrative/hook_templates.json: +131 条 (1.127→1.134MB) 
+  - narrative/player_chaos.json: +314 条 (1.174→1.190MB) 
+  - narrative/quality_fragments.json: +315 条 (1.140→1.158MB) 
+  - narrative/scene_beats.json: +152 条 (1.127→1.139MB) 
+  - narrative/truth_reveals.json: +250 条 (1.078→1.092MB) 
+  - templates/_mined_raw.json: +1 条 (0.106→0.106MB) 
+  - templates/battle_action.json: +3 条 (0.002→0.002MB) 
+  - templates/battle_effect.json: +2 条 (0.001→0.001MB) 
+  - templates/battle_opening.json: +1 条 (0.000→0.000MB) 
+  - templates/battle_slots.json: +18 条 (0.002→0.003MB) 
+  - templates/character_intro.json: +1 条 (0.001→0.001MB) 
+  - templates/character_slots.json: +4 条 (0.000→0.001MB) 
+  - templates/dialogue_exchange.json: +1 条 (0.002→0.002MB) 
+  - templates/dialogue_slots.json: +5 条 (0.001→0.001MB) 
+  - templates/emotion_beat.json: +1 条 (0.000→0.000MB) 
+  - templates/scene_frame.json: +1 条 (0.001→0.001MB) 
+  - vocab/adjectives.json: +800 条 (1.173→1.189MB) 
+  - vocab/body_parts.json: +1270 条 (1.225→1.251MB) 
+  - vocab/equipment.json: +1432 条 (1.262→1.292MB) 
+  - vocab/locations.json: +1400 条 (1.207→1.236MB) 
+  - voice/personality_tags.json: +13 条 (1.056→1.056MB) 
+  - voice/personality_voice.json: +530 条 (1.264→1.295MB) 
+  - world/scene_locations.json: +970 条 (1.285→1.306MB) 
+  - world/wanjie_context.json: +14 条 (1.066→1.067MB) 
+  - world/world_openings.json: +554 条 (1.228→1.256MB) 
+
+## 2026-08-13 06:34（手动验证运行 · CAP=200 MAXR=12 搜索=56）
+- 处理内容库：56 个；检索失败：0 个
+- 总新增条目：**26818**；体积 44.97MB → 45.67MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.207→1.229MB) 
+  - genre_terms/cthulhu_terms.json: +1000 条 (1.199→1.221MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.210→1.236MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.199→1.221MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +872 条 (1.188→1.207MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.189→1.211MB) 
+  - genre_terms/infinite_flow_terms.json: +977 条 (1.211→1.233MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +588 条 (1.215→1.227MB) 
+  - genre_terms/magic_academy_terms.json: +1000 条 (1.204→1.226MB) 
+  - genre_terms/mech_divinity_terms.json: +857 条 (1.193→1.213MB) 
+  - genre_terms/modern_china_terms.json: +1000 条 (1.187→1.208MB) 
+  - genre_terms/post_apocalyptic_terms.json: +1000 条 (1.198→1.220MB) 
+  - genre_terms/ragnarok_terms.json: +805 条 (1.229→1.247MB) 
+  - genre_terms/scifi_terms.json: +1000 条 (1.203→1.225MB) 
+  - genre_terms/steampunk_terms.json: +1039 条 (1.233→1.256MB) 
+  - genre_terms/sword_magic_terms.json: +1000 条 (1.170→1.191MB) 
+  - genre_terms/wuxia_terms.json: +1200 条 (1.218→1.244MB) 
+  - narrative/beat_narratives.json: +561 条 (1.228→1.260MB) 
+  - narrative/chapter_enrichments.json: +657 条 (1.251→1.284MB) 
+  - narrative/foreshadowing_pool.json: +2 条 (1.069→1.069MB) 
+  - narrative/hook_templates.json: +190 条 (1.134→1.145MB) 
+  - narrative/player_chaos.json: +403 条 (1.190→1.211MB) 
+  - narrative/quality_fragments.json: +330 条 (1.158→1.178MB) 
+  - narrative/scene_beats.json: +170 条 (1.139→1.151MB) 
+  - narrative/truth_reveals.json: +125 条 (1.092→1.100MB) 
+  - templates/_mined_raw.json: +164 条 (0.106→0.109MB) 
+  - templates/battle_action.json: +3 条 (0.002→0.002MB) 
+  - templates/battle_effect.json: +2 条 (0.001→0.001MB) 
+  - templates/battle_ending.json: +1 条 (0.000→0.000MB) 
+  - templates/battle_opening.json: +1 条 (0.000→0.000MB) 
+  - templates/battle_reaction.json: +2 条 (0.001→0.002MB) 
+  - templates/battle_slots.json: +19 条 (0.003→0.003MB) 
+  - templates/character_intro.json: +1 条 (0.001→0.001MB) 
+  - templates/character_slots.json: +4 条 (0.001→0.001MB) 
+  - templates/dialogue_exchange.json: +1 条 (0.002→0.002MB) 
+  - templates/dialogue_slots.json: +5 条 (0.001→0.001MB) 
+  - templates/emotion_beat.json: +1 条 (0.000→0.000MB) 
+  - templates/scene_frame.json: +1 条 (0.001→0.001MB) 
+  - templates/scene_slots.json: +1 条 (0.000→0.000MB) 
+  - vocab/adjectives.json: +800 条 (1.189→1.204MB) 
+  - vocab/body_parts.json: +1306 条 (1.251→1.278MB) 
+  - vocab/equipment.json: +1600 条 (1.292→1.326MB) 
+  - vocab/locations.json: +913 条 (1.236→1.255MB) 
+  - voice/personality_tags.json: +14 条 (1.056→1.056MB) 
+  - voice/personality_voice.json: +602 条 (1.295→1.329MB) 
+  - world/scene_locations.json: +1647 条 (1.306→1.340MB) 
+  - world/wanjie_context.json: +200 条 (1.067→1.075MB) 
+  - world/world_openings.json: +554 条 (1.256→1.283MB) 
+
+## 2026-08-13 07:36（手动验证运行 · CAP=200 MAXR=12 搜索=56）
+- 处理内容库：56 个；检索失败：0 个
+- 总新增条目：**25799**；体积 45.67MB → 46.35MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.229→1.250MB) 
+  - genre_terms/cthulhu_terms.json: +1000 条 (1.221→1.243MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.236→1.261MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.221→1.243MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +1000 条 (1.207→1.230MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.211→1.232MB) 
+  - genre_terms/infinite_flow_terms.json: +899 条 (1.233→1.253MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +245 条 (1.227→1.232MB) 
+  - genre_terms/magic_academy_terms.json: +875 条 (1.226→1.246MB) 
+  - genre_terms/mech_divinity_terms.json: +705 条 (1.213→1.228MB) 
+  - genre_terms/modern_china_terms.json: +1000 条 (1.208→1.230MB) 
+  - genre_terms/post_apocalyptic_terms.json: +1000 条 (1.220→1.242MB) 
+  - genre_terms/ragnarok_terms.json: +912 条 (1.247→1.266MB) 
+  - genre_terms/scifi_terms.json: +1000 条 (1.225→1.247MB) 
+  - genre_terms/steampunk_terms.json: +1200 条 (1.256→1.281MB) 
+  - genre_terms/sword_magic_terms.json: +512 条 (1.191→1.202MB) 
+  - genre_terms/wuxia_terms.json: +1200 条 (1.244→1.268MB) 
+  - narrative/beat_narratives.json: +490 条 (1.260→1.288MB) 
+  - narrative/chapter_enrichments.json: +626 条 (1.284→1.318MB) 
+  - narrative/foreshadowing_pool.json: +3 条 (1.069→1.069MB) 
+  - narrative/hook_templates.json: +376 条 (1.145→1.166MB) 
+  - narrative/player_chaos.json: +467 条 (1.211→1.237MB) 
+  - narrative/quality_fragments.json: +292 条 (1.178→1.192MB) 
+  - narrative/scene_beats.json: +87 条 (1.151→1.159MB) 
+  - narrative/truth_reveals.json: +34 条 (1.100→1.102MB) 
+  - templates/_mined_raw.json: +180 条 (0.109→0.113MB) 
+  - templates/battle_action.json: +4 条 (0.002→0.002MB) 
+  - templates/battle_effect.json: +2 条 (0.001→0.001MB) 
+  - templates/battle_ending.json: +1 条 (0.000→0.000MB) 
+  - templates/battle_opening.json: +1 条 (0.000→0.000MB) 
+  - templates/battle_reaction.json: +2 条 (0.002→0.002MB) 
+  - templates/battle_slots.json: +19 条 (0.003→0.003MB) 
+  - templates/character_intro.json: +1 条 (0.001→0.001MB) 
+  - templates/character_slots.json: +4 条 (0.001→0.001MB) 
+  - templates/dialogue_exchange.json: +2 条 (0.002→0.002MB) 
+  - templates/dialogue_slots.json: +5 条 (0.001→0.001MB) 
+  - templates/emotion_beat.json: +1 条 (0.000→0.000MB) 
+  - templates/scene_frame.json: +1 条 (0.001→0.001MB) 
+  - templates/scene_slots.json: +1 条 (0.000→0.000MB) 
+  - vocab/adjectives.json: +800 条 (1.204→1.221MB) 
+  - vocab/body_parts.json: +1137 条 (1.278→1.301MB) 
+  - vocab/equipment.json: +1600 条 (1.326→1.359MB) 
+  - vocab/locations.json: +1400 条 (1.255→1.285MB) 
+  - voice/personality_tags.json: +16 条 (1.056→1.056MB) 
+  - voice/personality_voice.json: +753 条 (1.329→1.373MB) 
+  - world/scene_locations.json: +1183 条 (1.340→1.365MB) 
+  - world/wanjie_context.json: +9 条 (1.075→1.076MB) 
+  - world/world_openings.json: +554 条 (1.283→1.313MB) 
+
+## 2026-08-13 08:28（手动验证运行 · CAP=200 MAXR=12 搜索=56）
+- 处理内容库：10 个；检索失败：46 个
+- 总新增条目：**9087**；体积 46.35MB → 46.55MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +1000 条 (1.250→1.271MB) 
+  - genre_terms/cthulhu_terms.json: +741 条 (1.243→1.260MB) 
+  - genre_terms/cultivation_terms.json: +1200 条 (1.261→1.286MB) 
+  - genre_terms/cyberpunk_terms.json: +1000 条 (1.243→1.265MB) 
+  - genre_terms/deep_sea_ruins_terms.json: +748 条 (1.230→1.246MB) 
+  - genre_terms/high_civ_lab_terms.json: +1000 条 (1.232→1.254MB) 
+  - genre_terms/infinite_flow_terms.json: +1000 条 (1.253→1.274MB) 
+  - genre_terms/lowmagic_medieval_terms.json: +654 条 (1.232→1.245MB) 
+  - genre_terms/magic_academy_terms.json: +942 条 (1.246→1.267MB) 
+  - genre_terms/mech_divinity_terms.json: +802 条 (1.228→1.245MB) 
+  - genre_terms/modern_china_terms.json: +0 条 (1.230→1.230MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/post_apocalyptic_terms.json: +0 条 (1.242→1.242MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/ragnarok_terms.json: +0 条 (1.266→1.266MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/scifi_terms.json: +0 条 (1.247→1.247MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/steampunk_terms.json: +0 条 (1.281→1.281MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/sword_magic_terms.json: +0 条 (1.202→1.202MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/wuxia_terms.json: +0 条 (1.268→1.268MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/beat_narratives.json: +0 条 (1.288→1.288MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/chapter_enrichments.json: +0 条 (1.318→1.318MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/foreshadowing_pool.json: +0 条 (1.069→1.069MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/hook_templates.json: +0 条 (1.166→1.166MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/player_chaos.json: +0 条 (1.237→1.237MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/pov_types.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/quality_fragments.json: +0 条 (1.192→1.192MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/scene_beats.json: +0 条 (1.159→1.159MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/truth_reveals.json: +0 条 (1.102→1.102MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/voice_flavours.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/_mined_raw.json: +0 条 (0.113→0.113MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_action.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_effect.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_ending.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_opening.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_reaction.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_slots.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_intro.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_exchange.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/emotion_beat.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_frame.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/adjectives.json: +0 条 (1.221→1.221MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/body_parts.json: +0 条 (1.301→1.301MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/equipment.json: +0 条 (1.359→1.359MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/locations.json: +0 条 (1.285→1.285MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_tags.json: +0 条 (1.056→1.056MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_voice.json: +0 条 (1.373→1.373MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_parts.json: +0 条 (1.063→1.063MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_reaction.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sensations.json: +0 条 (1.055→1.055MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sense_fallbacks.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/scene_locations.json: +0 条 (1.365→1.365MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_ambient.json: +0 条 (1.031→1.031MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_battle.json: +0 条 (1.033→1.033MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/wanjie_context.json: +0 条 (1.076→1.076MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/world_openings.json: +0 条 (1.313→1.313MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - 检索失败: genre_terms/modern_china_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/post_apocalyptic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/ragnarok_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/scifi_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/steampunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/sword_magic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/wuxia_terms.json:HTTP 432: {"detail":{"error":"This reque; narrative/beat_narratives.json:HTTP 432: {"detail":{"error":"This reque; narrative/chapter_enrichments.json:HTTP 432: {"detail":{"error":"This reque; narrative/foreshadowing_pool.json:HTTP 432: {"detail":{"error":"This reque; narrative/hook_templates.json:HTTP 432: {"detail":{"error":"This reque; narrative/player_chaos.json:HTTP 432: {"detail":{"error":"This reque; narrative/pov_types.json:HTTP 432: {"detail":{"error":"This reque; narrative/quality_fragments.json:HTTP 432: {"detail":{"error":"This reque; narrative/scene_beats.json:HTTP 432: {"detail":{"error":"This reque; narrative/truth_reveals.json:HTTP 432: {"detail":{"error":"This reque; narrative/voice_flavours.json:HTTP 432: {"detail":{"error":"This reque; templates/_mined_raw.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_action.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_effect.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_ending.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_opening.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_reaction.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/character_intro.json:HTTP 432: {"detail":{"error":"This reque; templates/character_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_exchange.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/emotion_beat.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_frame.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_slots.json:HTTP 432: {"detail":{"error":"This reque; vocab/adjectives.json:HTTP 432: {"detail":{"error":"This reque; vocab/body_parts.json:HTTP 432: {"detail":{"error":"This reque; vocab/equipment.json:HTTP 432: {"detail":{"error":"This reque; vocab/locations.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_tags.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_voice.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_parts.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_reaction.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sensations.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sense_fallbacks.json:HTTP 432: {"detail":{"error":"This reque; world/scene_locations.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_ambient.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_battle.json:HTTP 432: {"detail":{"error":"This reque; world/wanjie_context.json:HTTP 432: {"detail":{"error":"This reque; world/world_openings.json:HTTP 432: {"detail":{"error":"This reque
+
+## 2026-08-13 09:20（手动验证运行 · CAP=200 MAXR=12 搜索=56）
+- 处理内容库：0 个；检索失败：56 个
+- 总新增条目：**0**；体积 46.55MB → 46.55MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +0 条 (1.271→1.271MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cthulhu_terms.json: +0 条 (1.260→1.260MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cultivation_terms.json: +0 条 (1.286→1.286MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cyberpunk_terms.json: +0 条 (1.265→1.265MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/deep_sea_ruins_terms.json: +0 条 (1.246→1.246MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/high_civ_lab_terms.json: +0 条 (1.254→1.254MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/infinite_flow_terms.json: +0 条 (1.274→1.274MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/lowmagic_medieval_terms.json: +0 条 (1.245→1.245MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/magic_academy_terms.json: +0 条 (1.267→1.267MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/mech_divinity_terms.json: +0 条 (1.245→1.245MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/modern_china_terms.json: +0 条 (1.230→1.230MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/post_apocalyptic_terms.json: +0 条 (1.242→1.242MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/ragnarok_terms.json: +0 条 (1.266→1.266MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/scifi_terms.json: +0 条 (1.247→1.247MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/steampunk_terms.json: +0 条 (1.281→1.281MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/sword_magic_terms.json: +0 条 (1.202→1.202MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/wuxia_terms.json: +0 条 (1.268→1.268MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/beat_narratives.json: +0 条 (1.288→1.288MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/chapter_enrichments.json: +0 条 (1.318→1.318MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/foreshadowing_pool.json: +0 条 (1.069→1.069MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/hook_templates.json: +0 条 (1.166→1.166MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/player_chaos.json: +0 条 (1.237→1.237MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/pov_types.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/quality_fragments.json: +0 条 (1.192→1.192MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/scene_beats.json: +0 条 (1.159→1.159MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/truth_reveals.json: +0 条 (1.102→1.102MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/voice_flavours.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/_mined_raw.json: +0 条 (0.113→0.113MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_action.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_effect.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_ending.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_opening.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_reaction.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_slots.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_intro.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_exchange.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/emotion_beat.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_frame.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/adjectives.json: +0 条 (1.221→1.221MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/body_parts.json: +0 条 (1.301→1.301MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/equipment.json: +0 条 (1.359→1.359MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/locations.json: +0 条 (1.285→1.285MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_tags.json: +0 条 (1.056→1.056MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_voice.json: +0 条 (1.373→1.373MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_parts.json: +0 条 (1.063→1.063MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_reaction.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sensations.json: +0 条 (1.055→1.055MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sense_fallbacks.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/scene_locations.json: +0 条 (1.365→1.365MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_ambient.json: +0 条 (1.031→1.031MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_battle.json: +0 条 (1.033→1.033MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/wanjie_context.json: +0 条 (1.076→1.076MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/world_openings.json: +0 条 (1.313→1.313MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - 检索失败: genre_terms/creator_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cthulhu_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cultivation_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cyberpunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/deep_sea_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/high_civ_lab_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/infinite_flow_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/lowmagic_medieval_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/magic_academy_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/mech_divinity_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/modern_china_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/post_apocalyptic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/ragnarok_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/scifi_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/steampunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/sword_magic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/wuxia_terms.json:HTTP 432: {"detail":{"error":"This reque; narrative/beat_narratives.json:HTTP 432: {"detail":{"error":"This reque; narrative/chapter_enrichments.json:HTTP 432: {"detail":{"error":"This reque; narrative/foreshadowing_pool.json:HTTP 432: {"detail":{"error":"This reque; narrative/hook_templates.json:HTTP 432: {"detail":{"error":"This reque; narrative/player_chaos.json:HTTP 432: {"detail":{"error":"This reque; narrative/pov_types.json:HTTP 432: {"detail":{"error":"This reque; narrative/quality_fragments.json:HTTP 432: {"detail":{"error":"This reque; narrative/scene_beats.json:HTTP 432: {"detail":{"error":"This reque; narrative/truth_reveals.json:HTTP 432: {"detail":{"error":"This reque; narrative/voice_flavours.json:HTTP 432: {"detail":{"error":"This reque; templates/_mined_raw.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_action.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_effect.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_ending.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_opening.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_reaction.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/character_intro.json:HTTP 432: {"detail":{"error":"This reque; templates/character_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_exchange.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/emotion_beat.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_frame.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_slots.json:HTTP 432: {"detail":{"error":"This reque; vocab/adjectives.json:HTTP 432: {"detail":{"error":"This reque; vocab/body_parts.json:HTTP 432: {"detail":{"error":"This reque; vocab/equipment.json:HTTP 432: {"detail":{"error":"This reque; vocab/locations.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_tags.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_voice.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_parts.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_reaction.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sensations.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sense_fallbacks.json:HTTP 432: {"detail":{"error":"This reque; world/scene_locations.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_ambient.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_battle.json:HTTP 432: {"detail":{"error":"This reque; world/wanjie_context.json:HTTP 432: {"detail":{"error":"This reque; world/world_openings.json:HTTP 432: {"detail":{"error":"This reque
+
+## 2026-08-13 09:50（手动验证运行 · CAP=200 MAXR=12 搜索=56）
+- 处理内容库：0 个；检索失败：56 个
+- 总新增条目：**0**；体积 46.55MB → 46.55MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +0 条 (1.271→1.271MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cthulhu_terms.json: +0 条 (1.260→1.260MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cultivation_terms.json: +0 条 (1.286→1.286MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cyberpunk_terms.json: +0 条 (1.265→1.265MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/deep_sea_ruins_terms.json: +0 条 (1.246→1.246MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/high_civ_lab_terms.json: +0 条 (1.254→1.254MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/infinite_flow_terms.json: +0 条 (1.274→1.274MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/lowmagic_medieval_terms.json: +0 条 (1.245→1.245MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/magic_academy_terms.json: +0 条 (1.267→1.267MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/mech_divinity_terms.json: +0 条 (1.245→1.245MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/modern_china_terms.json: +0 条 (1.230→1.230MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/post_apocalyptic_terms.json: +0 条 (1.242→1.242MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/ragnarok_terms.json: +0 条 (1.266→1.266MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/scifi_terms.json: +0 条 (1.247→1.247MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/steampunk_terms.json: +0 条 (1.281→1.281MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/sword_magic_terms.json: +0 条 (1.202→1.202MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/wuxia_terms.json: +0 条 (1.268→1.268MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/beat_narratives.json: +0 条 (1.288→1.288MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/chapter_enrichments.json: +0 条 (1.318→1.318MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/foreshadowing_pool.json: +0 条 (1.069→1.069MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/hook_templates.json: +0 条 (1.166→1.166MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/player_chaos.json: +0 条 (1.237→1.237MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/pov_types.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/quality_fragments.json: +0 条 (1.192→1.192MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/scene_beats.json: +0 条 (1.159→1.159MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/truth_reveals.json: +0 条 (1.102→1.102MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/voice_flavours.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/_mined_raw.json: +0 条 (0.113→0.113MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_action.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_effect.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_ending.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_opening.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_reaction.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_slots.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_intro.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_exchange.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/emotion_beat.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_frame.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/adjectives.json: +0 条 (1.221→1.221MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/body_parts.json: +0 条 (1.301→1.301MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/equipment.json: +0 条 (1.359→1.359MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/locations.json: +0 条 (1.285→1.285MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_tags.json: +0 条 (1.056→1.056MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_voice.json: +0 条 (1.373→1.373MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_parts.json: +0 条 (1.063→1.063MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_reaction.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sensations.json: +0 条 (1.055→1.055MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sense_fallbacks.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/scene_locations.json: +0 条 (1.365→1.365MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_ambient.json: +0 条 (1.031→1.031MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_battle.json: +0 条 (1.033→1.033MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/wanjie_context.json: +0 条 (1.076→1.076MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/world_openings.json: +0 条 (1.313→1.313MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - 检索失败: genre_terms/creator_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cthulhu_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cultivation_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cyberpunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/deep_sea_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/high_civ_lab_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/infinite_flow_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/lowmagic_medieval_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/magic_academy_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/mech_divinity_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/modern_china_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/post_apocalyptic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/ragnarok_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/scifi_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/steampunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/sword_magic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/wuxia_terms.json:HTTP 432: {"detail":{"error":"This reque; narrative/beat_narratives.json:HTTP 432: {"detail":{"error":"This reque; narrative/chapter_enrichments.json:HTTP 432: {"detail":{"error":"This reque; narrative/foreshadowing_pool.json:HTTP 432: {"detail":{"error":"This reque; narrative/hook_templates.json:HTTP 432: {"detail":{"error":"This reque; narrative/player_chaos.json:HTTP 432: {"detail":{"error":"This reque; narrative/pov_types.json:HTTP 432: {"detail":{"error":"This reque; narrative/quality_fragments.json:HTTP 432: {"detail":{"error":"This reque; narrative/scene_beats.json:HTTP 432: {"detail":{"error":"This reque; narrative/truth_reveals.json:HTTP 432: {"detail":{"error":"This reque; narrative/voice_flavours.json:HTTP 432: {"detail":{"error":"This reque; templates/_mined_raw.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_action.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_effect.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_ending.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_opening.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_reaction.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/character_intro.json:HTTP 432: {"detail":{"error":"This reque; templates/character_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_exchange.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/emotion_beat.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_frame.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_slots.json:HTTP 432: {"detail":{"error":"This reque; vocab/adjectives.json:HTTP 432: {"detail":{"error":"This reque; vocab/body_parts.json:HTTP 432: {"detail":{"error":"This reque; vocab/equipment.json:HTTP 432: {"detail":{"error":"This reque; vocab/locations.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_tags.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_voice.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_parts.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_reaction.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sensations.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sense_fallbacks.json:HTTP 432: {"detail":{"error":"This reque; world/scene_locations.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_ambient.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_battle.json:HTTP 432: {"detail":{"error":"This reque; world/wanjie_context.json:HTTP 432: {"detail":{"error":"This reque; world/world_openings.json:HTTP 432: {"detail":{"error":"This reque
+
+## 2026-08-14 00:57（手动验证运行 · CAP=200 MAXR=12 搜索=55）
+- 处理内容库：0 个；检索失败：55 个
+- 总新增条目：**0**；体积 46.25MB → 46.25MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +0 条 (1.270→1.270MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cthulhu_terms.json: +0 条 (1.258→1.258MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cultivation_terms.json: +0 条 (1.285→1.285MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cyberpunk_terms.json: +0 条 (1.263→1.263MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/deep_sea_ruins_terms.json: +0 条 (1.245→1.245MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/high_civ_lab_terms.json: +0 条 (1.252→1.252MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/infinite_flow_terms.json: +0 条 (1.272→1.272MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/lowmagic_medieval_terms.json: +0 条 (1.244→1.244MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/magic_academy_terms.json: +0 条 (1.266→1.266MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/mech_divinity_terms.json: +0 条 (1.243→1.243MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/modern_china_terms.json: +0 条 (1.227→1.227MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/post_apocalyptic_terms.json: +0 条 (1.240→1.240MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/ragnarok_terms.json: +0 条 (1.264→1.264MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/scifi_terms.json: +0 条 (1.246→1.246MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/steampunk_terms.json: +0 条 (1.279→1.279MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/sword_magic_terms.json: +0 条 (1.201→1.201MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/wuxia_terms.json: +0 条 (1.267→1.267MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/beat_narratives.json: +0 条 (1.276→1.276MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/chapter_enrichments.json: +0 条 (1.308→1.308MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/foreshadowing_pool.json: +0 条 (1.069→1.069MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/hook_templates.json: +0 条 (1.155→1.155MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/player_chaos.json: +0 条 (1.225→1.225MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/pov_types.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/quality_fragments.json: +0 条 (1.185→1.185MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/scene_beats.json: +0 条 (1.151→1.151MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/truth_reveals.json: +0 条 (1.099→1.099MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/voice_flavours.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_action.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_effect.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_ending.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_opening.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_reaction.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_slots.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_intro.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_exchange.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/emotion_beat.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_frame.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/adjectives.json: +0 条 (1.213→1.213MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/body_parts.json: +0 条 (1.297→1.297MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/equipment.json: +0 条 (1.304→1.304MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/locations.json: +0 条 (1.281→1.281MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_tags.json: +0 条 (1.056→1.056MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_voice.json: +0 条 (1.360→1.360MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_parts.json: +0 条 (1.063→1.063MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_reaction.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sensations.json: +0 条 (1.055→1.055MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sense_fallbacks.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/scene_locations.json: +0 条 (1.361→1.361MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_ambient.json: +0 条 (1.031→1.031MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_battle.json: +0 条 (1.033→1.033MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/wanjie_context.json: +0 条 (1.074→1.074MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/world_openings.json: +0 条 (1.302→1.302MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - 检索失败: genre_terms/creator_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cthulhu_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cultivation_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cyberpunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/deep_sea_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/high_civ_lab_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/infinite_flow_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/lowmagic_medieval_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/magic_academy_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/mech_divinity_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/modern_china_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/post_apocalyptic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/ragnarok_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/scifi_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/steampunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/sword_magic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/wuxia_terms.json:HTTP 432: {"detail":{"error":"This reque; narrative/beat_narratives.json:HTTP 432: {"detail":{"error":"This reque; narrative/chapter_enrichments.json:HTTP 432: {"detail":{"error":"This reque; narrative/foreshadowing_pool.json:HTTP 432: {"detail":{"error":"This reque; narrative/hook_templates.json:HTTP 432: {"detail":{"error":"This reque; narrative/player_chaos.json:HTTP 432: {"detail":{"error":"This reque; narrative/pov_types.json:HTTP 432: {"detail":{"error":"This reque; narrative/quality_fragments.json:HTTP 432: {"detail":{"error":"This reque; narrative/scene_beats.json:HTTP 432: {"detail":{"error":"This reque; narrative/truth_reveals.json:HTTP 432: {"detail":{"error":"This reque; narrative/voice_flavours.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_action.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_effect.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_ending.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_opening.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_reaction.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/character_intro.json:HTTP 432: {"detail":{"error":"This reque; templates/character_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_exchange.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/emotion_beat.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_frame.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_slots.json:HTTP 432: {"detail":{"error":"This reque; vocab/adjectives.json:HTTP 432: {"detail":{"error":"This reque; vocab/body_parts.json:HTTP 432: {"detail":{"error":"This reque; vocab/equipment.json:HTTP 432: {"detail":{"error":"This reque; vocab/locations.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_tags.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_voice.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_parts.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_reaction.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sensations.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sense_fallbacks.json:HTTP 432: {"detail":{"error":"This reque; world/scene_locations.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_ambient.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_battle.json:HTTP 432: {"detail":{"error":"This reque; world/wanjie_context.json:HTTP 432: {"detail":{"error":"This reque; world/world_openings.json:HTTP 432: {"detail":{"error":"This reque
+
+## 2026-08-15 00:57（手动验证运行 · CAP=200 MAXR=12 搜索=55）
+- 处理内容库：0 个；检索失败：55 个
+- 总新增条目：**0**；体积 46.25MB → 46.25MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +0 条 (1.270→1.270MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cthulhu_terms.json: +0 条 (1.258→1.258MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cultivation_terms.json: +0 条 (1.285→1.285MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cyberpunk_terms.json: +0 条 (1.263→1.263MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/deep_sea_ruins_terms.json: +0 条 (1.245→1.245MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/high_civ_lab_terms.json: +0 条 (1.252→1.252MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/infinite_flow_terms.json: +0 条 (1.272→1.272MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/lowmagic_medieval_terms.json: +0 条 (1.244→1.244MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/magic_academy_terms.json: +0 条 (1.266→1.266MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/mech_divinity_terms.json: +0 条 (1.243→1.243MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/modern_china_terms.json: +0 条 (1.227→1.227MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/post_apocalyptic_terms.json: +0 条 (1.240→1.240MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/ragnarok_terms.json: +0 条 (1.264→1.264MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/scifi_terms.json: +0 条 (1.246→1.246MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/steampunk_terms.json: +0 条 (1.279→1.279MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/sword_magic_terms.json: +0 条 (1.201→1.201MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/wuxia_terms.json: +0 条 (1.267→1.267MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/beat_narratives.json: +0 条 (1.276→1.276MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/chapter_enrichments.json: +0 条 (1.308→1.308MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/foreshadowing_pool.json: +0 条 (1.069→1.069MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/hook_templates.json: +0 条 (1.155→1.155MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/player_chaos.json: +0 条 (1.225→1.225MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/pov_types.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/quality_fragments.json: +0 条 (1.185→1.185MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/scene_beats.json: +0 条 (1.151→1.151MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/truth_reveals.json: +0 条 (1.099→1.099MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/voice_flavours.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_action.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_effect.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_ending.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_opening.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_reaction.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_slots.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_intro.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_exchange.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/emotion_beat.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_frame.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/adjectives.json: +0 条 (1.213→1.213MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/body_parts.json: +0 条 (1.297→1.297MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/equipment.json: +0 条 (1.304→1.304MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/locations.json: +0 条 (1.281→1.281MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_tags.json: +0 条 (1.056→1.056MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_voice.json: +0 条 (1.360→1.360MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_parts.json: +0 条 (1.063→1.063MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_reaction.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sensations.json: +0 条 (1.055→1.055MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sense_fallbacks.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/scene_locations.json: +0 条 (1.361→1.361MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_ambient.json: +0 条 (1.031→1.031MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_battle.json: +0 条 (1.033→1.033MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/wanjie_context.json: +0 条 (1.074→1.074MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/world_openings.json: +0 条 (1.302→1.302MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - 检索失败: genre_terms/creator_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cthulhu_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cultivation_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cyberpunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/deep_sea_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/high_civ_lab_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/infinite_flow_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/lowmagic_medieval_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/magic_academy_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/mech_divinity_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/modern_china_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/post_apocalyptic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/ragnarok_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/scifi_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/steampunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/sword_magic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/wuxia_terms.json:HTTP 432: {"detail":{"error":"This reque; narrative/beat_narratives.json:HTTP 432: {"detail":{"error":"This reque; narrative/chapter_enrichments.json:HTTP 432: {"detail":{"error":"This reque; narrative/foreshadowing_pool.json:HTTP 432: {"detail":{"error":"This reque; narrative/hook_templates.json:HTTP 432: {"detail":{"error":"This reque; narrative/player_chaos.json:HTTP 432: {"detail":{"error":"This reque; narrative/pov_types.json:HTTP 432: {"detail":{"error":"This reque; narrative/quality_fragments.json:HTTP 432: {"detail":{"error":"This reque; narrative/scene_beats.json:HTTP 432: {"detail":{"error":"This reque; narrative/truth_reveals.json:HTTP 432: {"detail":{"error":"This reque; narrative/voice_flavours.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_action.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_effect.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_ending.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_opening.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_reaction.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/character_intro.json:HTTP 432: {"detail":{"error":"This reque; templates/character_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_exchange.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/emotion_beat.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_frame.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_slots.json:HTTP 432: {"detail":{"error":"This reque; vocab/adjectives.json:HTTP 432: {"detail":{"error":"This reque; vocab/body_parts.json:HTTP 432: {"detail":{"error":"This reque; vocab/equipment.json:HTTP 432: {"detail":{"error":"This reque; vocab/locations.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_tags.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_voice.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_parts.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_reaction.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sensations.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sense_fallbacks.json:HTTP 432: {"detail":{"error":"This reque; world/scene_locations.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_ambient.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_battle.json:HTTP 432: {"detail":{"error":"This reque; world/wanjie_context.json:HTTP 432: {"detail":{"error":"This reque; world/world_openings.json:HTTP 432: {"detail":{"error":"This reque
+
+## 2026-08-16 00:59（手动验证运行 · CAP=200 MAXR=12 搜索=55）
+- 处理内容库：0 个；检索失败：55 个
+- 总新增条目：**0**；体积 46.25MB → 46.25MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +0 条 (1.270→1.270MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cthulhu_terms.json: +0 条 (1.258→1.258MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cultivation_terms.json: +0 条 (1.285→1.285MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cyberpunk_terms.json: +0 条 (1.263→1.263MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/deep_sea_ruins_terms.json: +0 条 (1.245→1.245MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/high_civ_lab_terms.json: +0 条 (1.252→1.252MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/infinite_flow_terms.json: +0 条 (1.272→1.272MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/lowmagic_medieval_terms.json: +0 条 (1.244→1.244MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/magic_academy_terms.json: +0 条 (1.266→1.266MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/mech_divinity_terms.json: +0 条 (1.243→1.243MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/modern_china_terms.json: +0 条 (1.227→1.227MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/post_apocalyptic_terms.json: +0 条 (1.240→1.240MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/ragnarok_terms.json: +0 条 (1.264→1.264MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/scifi_terms.json: +0 条 (1.246→1.246MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/steampunk_terms.json: +0 条 (1.279→1.279MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/sword_magic_terms.json: +0 条 (1.201→1.201MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/wuxia_terms.json: +0 条 (1.267→1.267MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/beat_narratives.json: +0 条 (1.276→1.276MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/chapter_enrichments.json: +0 条 (1.308→1.308MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/foreshadowing_pool.json: +0 条 (1.069→1.069MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/hook_templates.json: +0 条 (1.155→1.155MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/player_chaos.json: +0 条 (1.225→1.225MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/pov_types.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/quality_fragments.json: +0 条 (1.185→1.185MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/scene_beats.json: +0 条 (1.151→1.151MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/truth_reveals.json: +0 条 (1.099→1.099MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/voice_flavours.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_action.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_effect.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_ending.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_opening.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_reaction.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_slots.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_intro.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_exchange.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/emotion_beat.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_frame.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/adjectives.json: +0 条 (1.213→1.213MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/body_parts.json: +0 条 (1.297→1.297MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/equipment.json: +0 条 (1.304→1.304MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/locations.json: +0 条 (1.281→1.281MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_tags.json: +0 条 (1.056→1.056MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_voice.json: +0 条 (1.360→1.360MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_parts.json: +0 条 (1.063→1.063MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_reaction.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sensations.json: +0 条 (1.055→1.055MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sense_fallbacks.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/scene_locations.json: +0 条 (1.361→1.361MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_ambient.json: +0 条 (1.031→1.031MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_battle.json: +0 条 (1.033→1.033MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/wanjie_context.json: +0 条 (1.074→1.074MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/world_openings.json: +0 条 (1.302→1.302MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - 检索失败: genre_terms/creator_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cthulhu_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cultivation_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cyberpunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/deep_sea_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/high_civ_lab_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/infinite_flow_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/lowmagic_medieval_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/magic_academy_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/mech_divinity_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/modern_china_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/post_apocalyptic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/ragnarok_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/scifi_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/steampunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/sword_magic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/wuxia_terms.json:HTTP 432: {"detail":{"error":"This reque; narrative/beat_narratives.json:HTTP 432: {"detail":{"error":"This reque; narrative/chapter_enrichments.json:HTTP 432: {"detail":{"error":"This reque; narrative/foreshadowing_pool.json:HTTP 432: {"detail":{"error":"This reque; narrative/hook_templates.json:HTTP 432: {"detail":{"error":"This reque; narrative/player_chaos.json:HTTP 432: {"detail":{"error":"This reque; narrative/pov_types.json:HTTP 432: {"detail":{"error":"This reque; narrative/quality_fragments.json:HTTP 432: {"detail":{"error":"This reque; narrative/scene_beats.json:HTTP 432: {"detail":{"error":"This reque; narrative/truth_reveals.json:HTTP 432: {"detail":{"error":"This reque; narrative/voice_flavours.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_action.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_effect.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_ending.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_opening.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_reaction.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/character_intro.json:HTTP 432: {"detail":{"error":"This reque; templates/character_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_exchange.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/emotion_beat.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_frame.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_slots.json:HTTP 432: {"detail":{"error":"This reque; vocab/adjectives.json:HTTP 432: {"detail":{"error":"This reque; vocab/body_parts.json:HTTP 432: {"detail":{"error":"This reque; vocab/equipment.json:HTTP 432: {"detail":{"error":"This reque; vocab/locations.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_tags.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_voice.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_parts.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_reaction.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sensations.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sense_fallbacks.json:HTTP 432: {"detail":{"error":"This reque; world/scene_locations.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_ambient.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_battle.json:HTTP 432: {"detail":{"error":"This reque; world/wanjie_context.json:HTTP 432: {"detail":{"error":"This reque; world/world_openings.json:HTTP 432: {"detail":{"error":"This reque
+
+## 2026-08-17 00:58（手动验证运行 · CAP=200 MAXR=12 搜索=55）
+- 处理内容库：0 个；检索失败：55 个
+- 总新增条目：**0**；体积 46.25MB → 46.25MB
+- 健康校验：去重异常 0 · 旋转词污染 0 → 全部一致 ✅
+  - genre_terms/creator_ruins_terms.json: +0 条 (1.270→1.270MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cthulhu_terms.json: +0 条 (1.258→1.258MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cultivation_terms.json: +0 条 (1.285→1.285MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/cyberpunk_terms.json: +0 条 (1.263→1.263MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/deep_sea_ruins_terms.json: +0 条 (1.245→1.245MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/high_civ_lab_terms.json: +0 条 (1.252→1.252MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/infinite_flow_terms.json: +0 条 (1.272→1.272MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/lowmagic_medieval_terms.json: +0 条 (1.244→1.244MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/magic_academy_terms.json: +0 条 (1.266→1.266MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/mech_divinity_terms.json: +0 条 (1.243→1.243MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/modern_china_terms.json: +0 条 (1.227→1.227MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/post_apocalyptic_terms.json: +0 条 (1.240→1.240MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/ragnarok_terms.json: +0 条 (1.264→1.264MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/scifi_terms.json: +0 条 (1.246→1.246MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/steampunk_terms.json: +0 条 (1.279→1.279MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/sword_magic_terms.json: +0 条 (1.201→1.201MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - genre_terms/wuxia_terms.json: +0 条 (1.267→1.267MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/beat_narratives.json: +0 条 (1.276→1.276MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/chapter_enrichments.json: +0 条 (1.308→1.308MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/foreshadowing_pool.json: +0 条 (1.069→1.069MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/hook_templates.json: +0 条 (1.155→1.155MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/player_chaos.json: +0 条 (1.225→1.225MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/pov_types.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/quality_fragments.json: +0 条 (1.185→1.185MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/scene_beats.json: +0 条 (1.151→1.151MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/truth_reveals.json: +0 条 (1.099→1.099MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - narrative/voice_flavours.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_action.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_effect.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_ending.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_opening.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_reaction.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/battle_slots.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_intro.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/character_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_exchange.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/dialogue_slots.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/emotion_beat.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_frame.json: +0 条 (0.001→0.001MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - templates/scene_slots.json: +0 条 (0.000→0.000MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/adjectives.json: +0 条 (1.213→1.213MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/body_parts.json: +0 条 (1.297→1.297MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/equipment.json: +0 条 (1.304→1.304MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - vocab/locations.json: +0 条 (1.281→1.281MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_tags.json: +0 条 (1.056→1.056MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/personality_voice.json: +0 条 (1.360→1.360MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_parts.json: +0 条 (1.063→1.063MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_body_reaction.json: +0 条 (0.003→0.003MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sensations.json: +0 条 (1.055→1.055MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - voice/voice_helpers_sense_fallbacks.json: +0 条 (0.002→0.002MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/scene_locations.json: +0 条 (1.361→1.361MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_ambient.json: +0 条 (1.031→1.031MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/senses/world_senses_battle.json: +0 条 (1.033→1.033MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/wanjie_context.json: +0 条 (1.074→1.074MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - world/world_openings.json: +0 条 (1.302→1.302MB) 检索失败:HTTP 432: {"detail":{"error":"This request exceeds your plan
+  - 检索失败: genre_terms/creator_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cthulhu_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cultivation_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/cyberpunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/deep_sea_ruins_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/high_civ_lab_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/infinite_flow_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/lowmagic_medieval_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/magic_academy_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/mech_divinity_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/modern_china_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/post_apocalyptic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/ragnarok_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/scifi_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/steampunk_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/sword_magic_terms.json:HTTP 432: {"detail":{"error":"This reque; genre_terms/wuxia_terms.json:HTTP 432: {"detail":{"error":"This reque; narrative/beat_narratives.json:HTTP 432: {"detail":{"error":"This reque; narrative/chapter_enrichments.json:HTTP 432: {"detail":{"error":"This reque; narrative/foreshadowing_pool.json:HTTP 432: {"detail":{"error":"This reque; narrative/hook_templates.json:HTTP 432: {"detail":{"error":"This reque; narrative/player_chaos.json:HTTP 432: {"detail":{"error":"This reque; narrative/pov_types.json:HTTP 432: {"detail":{"error":"This reque; narrative/quality_fragments.json:HTTP 432: {"detail":{"error":"This reque; narrative/scene_beats.json:HTTP 432: {"detail":{"error":"This reque; narrative/truth_reveals.json:HTTP 432: {"detail":{"error":"This reque; narrative/voice_flavours.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_action.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_effect.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_ending.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_opening.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_reaction.json:HTTP 432: {"detail":{"error":"This reque; templates/battle_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/character_intro.json:HTTP 432: {"detail":{"error":"This reque; templates/character_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_exchange.json:HTTP 432: {"detail":{"error":"This reque; templates/dialogue_slots.json:HTTP 432: {"detail":{"error":"This reque; templates/emotion_beat.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_frame.json:HTTP 432: {"detail":{"error":"This reque; templates/scene_slots.json:HTTP 432: {"detail":{"error":"This reque; vocab/adjectives.json:HTTP 432: {"detail":{"error":"This reque; vocab/body_parts.json:HTTP 432: {"detail":{"error":"This reque; vocab/equipment.json:HTTP 432: {"detail":{"error":"This reque; vocab/locations.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_tags.json:HTTP 432: {"detail":{"error":"This reque; voice/personality_voice.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_parts.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_body_reaction.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sensations.json:HTTP 432: {"detail":{"error":"This reque; voice/voice_helpers_sense_fallbacks.json:HTTP 432: {"detail":{"error":"This reque; world/scene_locations.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_ambient.json:HTTP 432: {"detail":{"error":"This reque; world/senses/world_senses_battle.json:HTTP 432: {"detail":{"error":"This reque; world/wanjie_context.json:HTTP 432: {"detail":{"error":"This reque; world/world_openings.json:HTTP 432: {"detail":{"error":"This reque

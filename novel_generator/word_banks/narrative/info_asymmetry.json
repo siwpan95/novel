@@ -1,0 +1,62 @@
+{
+  "same_event_stances": [
+    {
+      "event_anchor": "碎片争夺战",
+      "stances": [
+        {
+          "role": "protagonist",
+          "reading": "这是必须回收的遗物。"
+        },
+        {
+          "role": "observer",
+          "reading": "第47次了，每次都一样。"
+        },
+        {
+          "role": "bystander",
+          "reading": "他们到底在抢什么？"
+        }
+      ]
+    },
+    {
+      "event_anchor": "协议揭晓",
+      "stances": [
+        {
+          "role": "protagonist",
+          "reading": "代价是我的存在。"
+        },
+        {
+          "role": "player_proxy",
+          "reading": "条款还有另一面。"
+        },
+        {
+          "role": "system",
+          "reading": "同化进度67%，协议锁定。"
+        }
+      ]
+    },
+    {
+      "event_anchor": "真相降临",
+      "stances": [
+        {
+          "role": "protagonist",
+          "reading": "一切都有了去向。"
+        },
+        {
+          "role": "bystander",
+          "reading": "原来我们一直在被观看。"
+        },
+        {
+          "role": "system",
+          "reading": "记录终止，理由：超出授权。"
+        }
+      ]
+    }
+  ],
+  "cognitive_gap_hooks": [
+    "他不知道的是，{hidden}",
+    "读者比{pov}先看到{truth}",
+    "同一句话，{a}听成承诺，{b}听成威胁",
+    "{pov}以为结局已定，但{other}手里还有一步",
+    "所有人都相信的，恰恰是那个谎言"
+  ]
+}

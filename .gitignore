@@ -1,0 +1,66 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project outputs
+output/
+novel_generator/output/
+novel_generator/engine/output/
+
+# One-off data extraction tool
+extract_beat_texts.py
+
+# Plot state (runtime data, not source)
+spec/tracking/plot_state.json
+
+# Logs
+*.log
+novel_generator.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and environment
+*.key
+.env
+.env.*
+!.env.example
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# Distribution
+dist/
+build/
+*.egg-info/
+*.egg
+*.zip
+
+# Testing
+.pytest_cache/
+.tox/
+
+# Scratch / verification probes (not source)
+tmp/
+sample_40ch.txt
+verify_*.py
+

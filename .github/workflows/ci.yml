@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12', '3.13']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Lint with ruff
+        run: ruff check novel_generator/
+
+      - name: Type check with mypy
+        # TODO(P2): 修复剩余 ~45 个类型推断问题后去掉 || true
+        # mypy 配置见 pyproject.toml [tool.mypy] 段
+        run: mypy novel_generator/ --config-file=pyproject.toml || true
+
+      - name: Test with pytest
+        run: pytest --cov=novel_generator --cov-report=term --cov-fail-under=30
+
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Smoke test (generate ~4k chars)
+        run: |
+          python main.py --target-chars 4000
+          ls output/*.txt >/dev/null && echo "Smoke test passed"

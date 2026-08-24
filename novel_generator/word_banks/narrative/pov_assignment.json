@@ -1,0 +1,112 @@
+{
+  "plot_roles": {
+    "a_plot": {
+      "label": "主线·锚定",
+      "line_id": "a_lin_shuo",
+      "default_pov": "林朔",
+      "pov_characters": [
+        "林朔"
+      ],
+      "default_tone": "mysterious",
+      "tension_baseline": 5,
+      "priority": 5,
+      "beat_interval": 1,
+      "can_intersect_with": [
+        "b_tang_chuan",
+        "c_agents"
+      ],
+      "preferred_ops": [
+        "scene",
+        "action",
+        "reveal"
+      ],
+      "narrative_themes": [
+        "源界碎片",
+        "锚定者",
+        "千层饼真相",
+        "世界解锁"
+      ]
+    },
+    "b_plot": {
+      "label": "玩家觉醒",
+      "line_id": "b_tang_chuan",
+      "default_pov": "唐川",
+      "pov_characters": [
+        "唐川"
+      ],
+      "default_tone": "curious",
+      "tension_baseline": 3,
+      "priority": 3,
+      "beat_interval": 3,
+      "can_intersect_with": [
+        "a_lin_shuo",
+        "d_npc_arc"
+      ],
+      "preferred_ops": [
+        "dialogue",
+        "action",
+        "text"
+      ],
+      "narrative_themes": [
+        "真相发现",
+        "社区组织",
+        "虚拟vs真实",
+        "玩家自主"
+      ]
+    },
+    "c_plot": {
+      "label": "暗流涌动",
+      "line_id": "c_agents",
+      "default_pov": "白夜",
+      "pov_characters": [
+        "白夜"
+      ],
+      "default_tone": "dark",
+      "tension_baseline": 6,
+      "priority": 2,
+      "beat_interval": 5,
+      "can_intersect_with": [
+        "a_lin_shuo"
+      ],
+      "preferred_ops": [
+        "reveal",
+        "battle",
+        "text"
+      ],
+      "narrative_themes": [
+        "代理人渗透",
+        "祂们",
+        "源能侵蚀",
+        "循环真相"
+      ]
+    }
+  },
+  "role_pool_by_attribute": {
+    "personality_tag": {
+      "冷峻": [
+        "protagonist",
+        "observer"
+      ],
+      "热忱": [
+        "player_proxy"
+      ],
+      "阴鸷": [
+        "observer",
+        "system"
+      ],
+      "温柔": [
+        "bystander"
+      ]
+    },
+    "knowledge_level": {
+      "high": [
+        "system",
+        "observer"
+      ],
+      "low": [
+        "bystander",
+        "player_proxy"
+      ]
+    }
+  }
+}

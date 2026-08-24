@@ -1,0 +1,54 @@
+{
+  "by_role": {
+    "protagonist": {
+      "style": "冷叙事——焦虑与计算并存",
+      "adds": "主角知道但读者不知的铺垫，为后续反转蓄力",
+      "header": "【{pov}视角】",
+      "footer": "{adds}"
+    },
+    "player_proxy": {
+      "style": "热叙事——即时情绪、身体反应、现场细节",
+      "adds": "第一手感官信息与现场混乱感",
+      "header": "【{pov}视角·现场】",
+      "footer": "{adds}"
+    },
+    "observer": {
+      "style": "冷叙事+历史纵深——见过太多循环的麻木",
+      "adds": "时间/记忆维度的信息，'第N次了，每次都一样'",
+      "header": "【{pov}视角·残影】",
+      "footer": "{adds}"
+    },
+    "bystander": {
+      "style": "体感叙事——疼痛、温度、听不清的对话",
+      "adds": "被卷入者的无知视角，不知自己面对什么",
+      "header": "【{pov}视角】",
+      "footer": "{adds}"
+    },
+    "system": {
+      "style": "数据叙事——纯面板日志格式",
+      "adds": "冰冷系统数据：能量曲线/同化率/协议条款",
+      "header": "【{pov}日志·内部记录】",
+      "footer": "{adds}"
+    }
+  },
+  "by_personality": {
+    "冷峻": {
+      "style": "克制白描",
+      "adds": "少评语，多事实",
+      "header": "【{pov}·冷眼】",
+      "footer": "{adds}"
+    },
+    "热忱": {
+      "style": "情感外放",
+      "adds": "带温度的主观判断",
+      "header": "【{pov}·炽】",
+      "footer": "{adds}"
+    },
+    "阴鸷": {
+      "style": "压抑暗流",
+      "adds": "话里有话的威胁感",
+      "header": "【{pov}·暗】",
+      "footer": "{adds}"
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "timeline_events": [
+    {
+      "type": "world",
+      "id": "unlock_wuxia",
+      "name": "武侠世界解锁",
+      "trigger_time": 1,
+      "narrative_hint": "world_entry_small",
+      "payload": {
+        "world": "武侠·苍云之殇",
+        "layer": 1
+      },
+      "condition": null,
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 1
+    },
+    {
+      "type": "world",
+      "id": "unlock_wasteland",
+      "name": "末日废土解锁",
+      "trigger_time": 300,
+      "narrative_hint": "world_entry_medium",
+      "payload": {
+        "world": "末日废土",
+        "layer": 1
+      },
+      "condition": null,
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 1
+    },
+    {
+      "type": "world",
+      "id": "unlock_cultivation",
+      "name": "东方修仙世界解锁",
+      "trigger_time": 800,
+      "narrative_hint": "world_entry_large",
+      "payload": {
+        "world": "东方修仙",
+        "layer": 2
+      },
+      "condition": null,
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 1
+    },
+    {
+      "type": "world",
+      "id": "unlock_cyberpunk",
+      "name": "赛博都市解锁",
+      "trigger_time": 1500,
+      "narrative_hint": "world_entry_medium",
+      "payload": {
+        "world": "赛博都市",
+        "layer": 2
+      },
+      "condition": null,
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 1
+    },
+    {
+      "type": "world",
+      "id": "unlock_ragnarok",
+      "name": "诸神黄昏解锁",
+      "trigger_time": 3000,
+      "narrative_hint": "world_entry_epic",
+      "payload": {
+        "world": "诸神黄昏",
+        "layer": 3
+      },
+      "condition": null,
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 1
+    },
+    {
+      "type": "region",
+      "id": "danger_spike",
+      "name": "危险区域遭遇",
+      "trigger_time": 0,
+      "narrative_hint": "danger_encounter",
+      "payload": null,
+      "condition": "danger>=7",
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 1
+    },
+    {
+      "type": "region",
+      "id": "rare_find",
+      "name": "隐藏路径发现",
+      "trigger_time": 0,
+      "narrative_hint": "discovery",
+      "payload": {
+        "discovery_type": "hidden_path"
+      },
+      "condition": "visited>=3&category==ruin",
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 1
+    },
+    {
+      "type": "region",
+      "id": "faction_clash",
+      "name": "势力冲突爆发",
+      "trigger_time": 0,
+      "narrative_hint": "battle_looming",
+      "payload": null,
+      "condition": "danger>=8&category==battlefield",
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 3
+    },
+    {
+      "type": "region",
+      "id": "calm_moment",
+      "name": "宁静时刻",
+      "trigger_time": 0,
+      "narrative_hint": "peaceful_interlude",
+      "payload": null,
+      "condition": "danger<=2&category==town",
+      "repeatable": false,
+      "cooldown": 0,
+      "duration": 1
+    },
+    {
+      "type": "world",
+      "id": "agent_incursion",
+      "name": "代理人渗透增强",
+      "trigger_time": 2000,
+      "narrative_hint": "agent_threat_rising",
+      "payload": null,
+      "condition": "unlocked_worlds>=3",
+      "repeatable": true,
+      "cooldown": 1000,
+      "duration": 1
+    },
+    {
+      "type": "world",
+      "id": "source_fluctuation",
+      "name": "源能波动",
+      "trigger_time": 1500,
+      "narrative_hint": "mystery_ deepening",
+      "payload": null,
+      "condition": null,
+      "repeatable": true,
+      "cooldown": 800,
+      "duration": 1
+    }
+  ],
+  "convergence_points": [
+    {
+      "convergence_id": "conv_cangyun",
+      "label": "苍云之殇汇聚",
+      "line_ids": [
+        "a_lin_shuo",
+        "c_agents",
+        "d_wuxia_cangyun"
+      ],
+      "trigger_phase": "CONFLICT",
+      "trigger_progress_min": 0.5,
+      "shared_event_description": "苍云山第二块碎片的争夺战——林朔要回收碎片，白夜要阻止代理人，叶琳在两者之间",
+      "world_name": "武侠·苍云之殇",
+      "pov_sequence": [
+        "林朔",
+        "叶琳",
+        "白夜"
+      ],
+      "tension_boost": 4,
+      "one_shot": true
+    },
+    {
+      "convergence_id": "conv_wasteland",
+      "label": "废土抉择汇聚",
+      "line_ids": [
+        "a_lin_shuo",
+        "b_tang_chuan",
+        "c_agents"
+      ],
+      "trigger_phase": "CHOICE",
+      "trigger_progress_min": 0.6,
+      "shared_event_description": "废土避难所——林朔面临锚定者协议的代价：继续锚定将消耗自身存在，不锚定则世界崩塌。唐川从玩家侧发现了协议的另一面。白夜带来了祂们的最后通牒。",
+      "world_name": "末日废土",
+      "pov_sequence": [
+        "林朔",
+        "唐川",
+        "白夜"
+      ],
+      "tension_boost": 5,
+      "one_shot": true
+    },
+    {
+      "convergence_id": "conv_guixu_final",
+      "label": "归墟终局汇聚",
+      "line_ids": [
+        "a_lin_shuo",
+        "b_tang_chuan",
+        "c_agents",
+        "d_wuxia_cangyun"
+      ],
+      "trigger_phase": "TRANSFORM",
+      "trigger_progress_min": 0.7,
+      "shared_event_description": "归墟中枢——墟核揭示了全部真相：46任锚定者、源界文明的逃逸、祂们的真正目的。每一个角色都站在了选择的十字路口。",
+      "world_name": "归墟",
+      "pov_sequence": [
+        "林朔",
+        "唐川",
+        "白夜",
+        "叶琳"
+      ],
+      "tension_boost": 5,
+      "one_shot": true
+    }
+  ]
+}

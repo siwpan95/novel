@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>万界归墟 · 棋盘生成器</title>
+<style>
+/* ===== 本地字体加载 ===== */
+@font-face {
+  font-family: 'GangBiHei';
+  src: url('/static/font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --border: #e2e0d8;
+  --text: #2c2c28;
+  --text-muted: #888780;
+  --accent: #534AB7;
+  --accent-light: #EEEDFE;
+  --danger: #993C1D;
+  --success: #0F6E56;
+  --warning: #854F0B;
+  --font: 'GangBiHei', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 15px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 标题 */
+.页眉 {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.页眉 h1 { font-size: 22px; font-weight: 500; letter-spacing: 2px; }
+.页眉 .版本 { font-size: 12px; color: var(--text-muted); letter-spacing: 1px; }
+
+/* 布局 */
+.双栏 { display: grid; grid-template-columns: 340px 1fr; gap: 20px; }
+
+/* 面板 */
+.面板 {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.面板 h3 { font-size: 13px; font-weight: 500; color: var(--text-muted); letter-spacing: 1px; }
+.面板 label { font-size: 13px; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.面板 input, .面板 select {
+  width: 100%; padding: 8px 10px; font-size: 14px;
+  border: 0.5px solid var(--border); border-radius: 6px;
+  background: var(--bg); font-family: var(--font);
+}
+.面板 input:focus, .面板 select:focus { outline: none; border-color: var(--accent); }
+
+/* 按钮 */
+.按钮 {
+  padding: 10px 18px; font-size: 14px; border-radius: 6px; border: none;
+  cursor: pointer; font-family: var(--font); font-weight: 500;
+  transition: opacity 0.15s; letter-spacing: 1px;
+}
+.按钮:hover { opacity: 0.85; }
+.按钮-主 { background: var(--accent); color: white; }
+.按钮-停 { background: var(--danger); color: white; }
+.按钮-次 { background: transparent; border: 0.5px solid var(--border); color: var(--text); }
+
+/* 预设按钮组 */
+.预设组 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.预设按钮 {
+  padding: 7px 0; font-size: 13px; border: 0.5px solid var(--border);
+  border-radius: 6px; cursor: pointer; background: var(--bg);
+  text-align: center; font-family: var(--font); letter-spacing: 1px;
+}
+.预设按钮.激活 { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+
+/* 进度条 */
+.进度区 { margin: 8px 0; }
+.进度条 {
+  height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;
+}
+.进度填充 {
+  height: 100%; background: var(--accent); border-radius: 3px; width: 0%;
+  transition: width 0.3s ease;
+}
+.进度文字 { font-size: 12px; color: var(--text-muted); margin-top: 4px; display: flex; justify-content: space-between; }
+
+/* 统计卡片 */
+.统计行 {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+}
+.统计卡片 {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: var(--radius); padding: 12px; text-align: center;
+}
+.统计数值 { font-size: 20px; font-weight: 500; }
+.统计标签 { font-size: 11px; color: var(--text-muted); margin-top: 2px; letter-spacing: 1px; }
+
+/* 棋盘 */
+.棋盘 {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: var(--radius); padding: 16px;
+}
+.棋盘 h3 { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 12px; letter-spacing: 1px; }
+.棋盘行 { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.棋盘标签 { width: 110px; font-size: 12px; color: var(--text-muted); text-align: right; letter-spacing: 1px; }
+.棋盘条框 { flex: 1; height: 22px; background: var(--bg); border-radius: 4px; overflow: hidden; display: flex; }
+.棋盘条 { height: 100%; transition: width 0.3s ease; display: flex; align-items: center; padding-left: 8px; letter-spacing: 1px; }
+.棋盘条 span { font-size: 11px; color: white; white-space: nowrap; }
+.条-A { background: var(--accent); }
+.条-B { background: #1D9E75; }
+.条-C { background: var(--danger); }
+.条-D { background: var(--warning); }
+
+/* 输出区 */
+.输出区 {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: var(--radius); padding: 24px; min-height: 400px;
+  max-height: 60vh; overflow-y: auto;
+  font-size: 15px; line-height: 2.2; letter-spacing: 0.5px;
+  white-space: pre-wrap; word-break: break-word;
+}
+.输出区 .分隔线 {
+  color: var(--text-muted); font-size: 11px; letter-spacing: 3px;
+  text-align: center; display: block; margin: 16px 0;
+}
+.输出区 .节拍标签 {
+  font-size: 10px; color: var(--accent); background: var(--accent-light);
+  padding: 1px 6px; border-radius: 3px; margin-right: 6px; letter-spacing: 1px;
+}
+.输出区:empty::after {
+  content: '点击「开始生成」…';
+  color: var(--text-muted); font-style: italic;
+}
+
+/* 主导航区 */
+.主区域 { display: flex; flex-direction: column; gap: 16px; }
+
+/* 响应式 */
+@media (max-width: 800px) {
+  .双栏 { grid-template-columns: 1fr; }
+  .统计行 { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<div class="页眉">
+  <h1>万界归墟 · 棋盘生成器</h1>
+  <span class="版本">v3.0 · 事件驱动 · 棋盘布局 · 多线叙事</span>
+</div>
+
+<div class="双栏">
+  <!-- 左侧面板 -->
+  <div class="面板">
+    <h3>生成参数</h3>
+
+    <div>
+      <label>预设规模</label>
+      <div class="预设组" id="预设组"></div>
+    </div>
+
+    <div>
+      <label>目标字数</label>
+      <input type="number" id="目标字数" value="2000" min="500" max="200000" step="500">
+    </div>
+
+    <div>
+      <label>随机种子（零则随机）</label>
+      <input type="number" id="种子" value="42" min="0" max="999999">
+    </div>
+
+    <div style="display:flex; gap:8px;">
+      <button class="按钮 按钮-主" id="开始按钮" onclick="开始生成()" style="flex:1;">
+        <span id="按钮文字">开始生成</span>
+      </button>
+      <button class="按钮 按钮-停" id="停止按钮" onclick="停止生成()" style="display:none;">停止</button>
+    </div>
+
+    <div style="font-size:11px; color:var(--text-muted); text-align:center;" id="服务状态">
+      服务运行中…
+    </div>
+
+    <div class="进度区" id="进度区" style="display:none;">
+      <div class="进度条"><div class="进度填充" id="进度条"></div></div>
+      <div class="进度文字">
+        <span id="进度字">零</span>
+        <span id="进度比">零%</span>
+      </div>
+    </div>
+
+    <h3>实时统计</h3>
+    <div class="统计行">
+      <div class="统计卡片">
+        <div class="统计数值" id="统计字">〇</div>
+        <div class="统计标签">已生成字</div>
+      </div>
+      <div class="统计卡片">
+        <div class="统计数值" id="统计段">〇</div>
+        <div class="统计标签">段落数</div>
+      </div>
+      <div class="统计卡片">
+        <div class="统计数值" id="统计世界">归墟</div>
+        <div class="统计标签">活跃世界</div>
+      </div>
+      <div class="统计卡片">
+        <div class="统计数值" id="统计交叉">〇</div>
+        <div class="统计标签">交叉点</div>
+      </div>
+    </div>
+
+    <h3>棋盘布局</h3>
+    <div class="棋盘" id="棋盘">
+      <div style="font-size:12px; color:var(--text-muted); text-align:center; letter-spacing:1px;">等待生成…</div>
+    </div>
+  </div>
+
+  <!-- 右侧输出 -->
+  <div class="主区域">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3 style="font-size:13px; font-weight:500; color:var(--text-muted); letter-spacing:1px;">实时输出</h3>
+      <button class="按钮 按钮-次" onclick="清空输出()" style="font-size:12px; padding:5px 12px;">清空</button>
+    </div>
+    <div class="输出区" id="输出"></div>
+  </div>
+</div>
+
+<script>
+let 事件源 = null;
+let 预设数据 = {};
+let 累计节拍 = {};
+let 已完成 = false;
+
+// 初始化
+fetch('/api/presets').then(r => r.json()).then(数据 => {
+  预设数据 = 数据;
+  const 网格 = document.getElementById('预设组');
+  Object.entries(数据).forEach(([键, 值]) => {
+    const 按钮 = document.createElement('div');
+    按钮.className = '预设按钮' + (键 === '短篇' ? ' 激活' : '');
+    按钮.textContent = 键;
+    按钮.title = 值.toLocaleString() + ' 字';
+    按钮.onclick = () => {
+      document.querySelectorAll('.预设按钮').forEach(b => b.classList.remove('激活'));
+      按钮.classList.add('激活');
+      document.getElementById('目标字数').value = 值;
+    };
+    网格.appendChild(按钮);
+  });
+});
+
+function 开始生成() {
+  const 目标 = document.getElementById('目标字数').value;
+  const 种子 = document.getElementById('种子').value;
+
+  document.getElementById('开始按钮').style.display = 'none';
+  document.getElementById('停止按钮').style.display = 'block';
+  document.getElementById('进度区').style.display = 'block';
+  document.getElementById('输出').innerHTML = '';
+  累计节拍 = {};
+  已完成 = false;
+
+  事件源 = new EventSource(`/api/generate?target=${目标}&seed=${种子}`);
+
+  事件源.addEventListener('status', e => {
+    const d = JSON.parse(e.data);
+    追加输出(`<span style="color:var(--text-muted);">【系统】${d.msg}</span>\n`);
+  });
+
+  事件源.addEventListener('progress', e => {
+    const d = JSON.parse(e.data);
+
+    // 进度
+    document.getElementById('进度条').style.width = d.progress + '%';
+    document.getElementById('进度字').textContent = d.chars.toLocaleString() + ' / ' + d.total.toLocaleString();
+    document.getElementById('进度比').textContent = d.progress + '%';
+
+    // 统计
+    document.getElementById('统计字').textContent = d.chars.toLocaleString();
+    document.getElementById('统计段').textContent = d.passage;
+    document.getElementById('统计世界').textContent = d.world;
+    document.getElementById('统计交叉').textContent = d.intersections;
+
+    // 增量输出
+    if (d.text) {
+      追加输出(d.text + '\n\n');
+    }
+
+    // 棋盘更新
+    刷新棋盘(d.dist, d.beats || []);
+  });
+
+  事件源.addEventListener('complete', e => {
+    已完成 = true;
+    const d = JSON.parse(e.data);
+    追加输出(`\n<span style="color:var(--success);">【完成】${d.chars.toLocaleString()} 字 · 耗时 ${d.elapsed} 秒 · ${d.intersections} 个交叉点</span>\n`);
+    重置界面();
+  });
+
+  事件源.addEventListener('error', e => {
+    try {
+      const d = JSON.parse(e.data);
+      追加输出(`\n<span style="color:var(--danger);">【错误】${d.msg}</span>\n`);
+    } catch(_) {}
+    重置界面();
+  });
+
+  // onerror 在 SSE 流正常关闭时也会触发（浏览器行为）
+  // 用 readyState 区分：CLOSED(2) 且已完成 = 正常结束；其他 = 真中断
+  事件源.onerror = () => {
+    if (已完成) return;
+    // 等一小让 complete 事件有机会先到达
+    setTimeout(() => {
+      if (!已完成 && 事件源 && 事件源.readyState === EventSource.CLOSED) {
+        // 没有收到 complete 事件就关闭了 → 真中断
+        追加输出('\n<span style="color:var(--danger);">【错误】连接意外中断，请刷新页面重试</span>\n');
+      }
+      重置界面();
+    }, 500);
+  };
+}
+
+function 停止生成() {
+  已完成 = true;
+  if (事件源) { 事件源.close(); 事件源 = null; }
+  fetch('/api/stop', { method: 'POST' }).catch(() => {});
+  重置界面();
+}
+
+// 自动轮询服务状态
+setInterval(() => {
+  fetch('/api/health').then(r => r.json()).then(d => {
+    const 运行 = d.uptime ? `${Math.floor(d.uptime / 60)}分${d.uptime % 60}秒` : '…';
+    const 磁盘 = d.disk?.free_gb ? `${d.disk.free_gb}GB 可用` : '';
+    document.getElementById('服务状态').textContent = 
+      `服务运行 ${运行}${磁盘 ? ' · 磁盘 ' + 磁盘 : ''}`;
+    if (d.engine?.current > 0) {
+      document.getElementById('统计字').textContent = d.engine.current.toLocaleString();
+      document.getElementById('统计段').textContent = d.engine.passages;
+      document.getElementById('统计世界').textContent = d.engine.world;
+      document.getElementById('统计交叉').textContent = d.engine.intersections;
+    }
+  }).catch(() => {});
+}, 5000);
+
+function 重置界面() {
+  document.getElementById('开始按钮').style.display = 'block';
+  document.getElementById('停止按钮').style.display = 'none';
+}
+
+function 追加输出(html) {
+  const 输出 = document.getElementById('输出');
+  输出.innerHTML += html;
+  输出.scrollTop = 输出.scrollHeight;
+}
+
+function 清空输出() {
+  document.getElementById('输出').innerHTML = '';
+}
+
+function 刷新棋盘(分布, 节拍) {
+  Object.entries(分布).forEach(([键, 值]) => {
+    累计节拍[键] = (累计节拍[键] || 0) + 值;
+  });
+  const 总计 = Math.max(1, Object.values(累计节拍).reduce((a, b) => a + b, 0));
+
+  const 线定义 = [
+    { id: 'a_lin_shuo', 标签: '主线：归墟锚定', cls: '条-A' },
+    { id: 'b_tang_chuan', 标签: '辅线：玩家觉醒', cls: '条-B' },
+    { id: 'c_agents', 标签: '暗线：暗流涌动', cls: '条-C' },
+    { id: 'd_wuxia_yl', 标签: '支线：苍云遗志', cls: '条-D' },
+  ];
+
+  let html = '';
+  线定义.forEach(线 => {
+    const 数量 = 累计节拍[线.id] || 0;
+    const 占比 = Math.round(数量 / 总计 * 100);
+    if (数量 > 0) {
+      html += `<div class="棋盘行">
+        <span class="棋盘标签">${线.标签}</span>
+        <div class="棋盘条框">
+          <div class="棋盘条 ${线.cls}" style="width:${占比}%">
+            <span>${数量}拍</span>
+          </div>
+        </div>
+      </div>`;
+    }
+  });
+
+  if (节拍.length > 0) {
+    html += '<div style="margin-top:10px; font-size:11px; color:var(--text-muted); letter-spacing:1px;">';
+    节拍.forEach(b => {
+      const 标记 = b.type === 'intersection' ? '↗ 交汇' : b.type === 'primary' ? '主拍' : '辅拍';
+      html += `<span style="margin-right:10px;">${b.line} · ${标记} · ${b.pov}</span>`;
+    });
+    html += '</div>';
+  }
+
+  document.getElementById('棋盘').innerHTML = html || '<div style="font-size:12px; color:var(--text-muted); text-align:center; letter-spacing:1px;">等待生成…</div>';
+}
+</script>
+</body>
+</html>

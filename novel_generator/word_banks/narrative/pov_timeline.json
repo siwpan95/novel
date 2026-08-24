@@ -1,0 +1,27 @@
+{
+  "convergence_defaults": {
+    "trigger_phase": "CONFLICT",
+    "trigger_progress_min": 0.5,
+    "tension_boost": 3,
+    "one_shot": true
+  },
+  "anti_chaos": {
+    "max_pov_switch_per_passage": 2,
+    "min_arc_continuity": 0.3,
+    "forbid_consecutive_same_pov": false,
+    "note": "约束 StoryBoard 调度，避免视角失焦与情节断裂（百科所列 POV 坑）"
+  },
+  "arc_stage_thresholds": {
+    "climax_avg_phase_idx": 3.5,
+    "climax_avg_progress": 0.7,
+    "converge_avg_phase_idx": 2.5,
+    "rise_avg_phase_idx": 1.5,
+    "fall_all_triggered_progress": 0.8
+  },
+  "beat_intervals": {
+    "a_plot": 1,
+    "b_plot": 3,
+    "c_plot": 5,
+    "d_plot": 8
+  }
+}

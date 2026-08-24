@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["novel_generator*"]
+
+[tool.setuptools.package-data]
+novel_generator = ["word_banks/**/*.json", "word_banks/**/*.md"]
+
+[project]
+name = "novel-generator"
+version = "2.1.0"
+description = "双引擎程序化小说生成系统——《万界归墟》"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "novel-generator contributors"}
+]
+keywords = ["novel", "procedural-generation", "chinese-novel", "creative-writing"]
+dependencies = [
+    "flask>=3.0",
+    "waitress>=3.0",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.scripts]
+novel-gen = "novel_generator.__main__:main"
+
+[project.optional-dependencies]
+gui = [
+    "PyQt5>=5.15",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1",
+    "mypy>=1.0",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+# 项目级忽略：E402=sys.path 前置导入（项目惯例）
+# E501=行太长（大量 docstring 与长字符串）
+# E701/E702=同行多语句（低优先级风格）
+# E741=模糊变量名（如 'l'）
+ignore = ["E402", "E501", "E701", "E702", "E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["novel_generator/tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["novel_generator"]
+omit = ["novel_generator/tests/*"]
+
+[tool.coverage.report]
+fail_under = 30
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+disallow_untyped_defs = false
+# suppress no_implicit_optional (project-wide, 30+ sites; requires Optional[X] refactor)
+implicit_optional = true
+# files to check
+files = ["novel_generator"]
+# strictness (incremental path to removing CI || true)
+disallow_incomplete_defs = false
+check_untyped_defs = false
+warn_return_any = false
+warn_unused_ignores = false

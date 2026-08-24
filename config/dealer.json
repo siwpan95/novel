@@ -1,0 +1,15 @@
+{
+  "dealer": {
+    "markov": {
+      "enabled": true,
+      "order": 2,
+      "alpha": 0.5,
+      "source": "../data/deal_transitions.json"
+    },
+    "embedding_dedup": {
+      "enabled": true,
+      "threshold": 0.82,
+      "window": 24
+    }
+  }
+}

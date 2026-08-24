@@ -1,0 +1,3 @@
+# novel dependencies (auto-generated 2026-08-20)
+flask
+waitress
