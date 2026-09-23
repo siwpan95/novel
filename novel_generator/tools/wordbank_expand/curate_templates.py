@@ -11,8 +11,10 @@
 """
 import os
 import json
+from pathlib import Path
 
-TPL_DIR = r"G:/novel/novel_generator/word_banks/templates"
+# 2026-09-28 去本地化：templates 词库目录改由本文件位置推导（原 G:/novel 硬编码已不存在）
+TPL_DIR = str(Path(__file__).resolve().parents[2] / "word_banks" / "templates")
 
 # ---------------------------------------------------------------------------
 # 批量拆槽产物：带 {slot} 槽位的模板骨架（人工提炼）

@@ -2,9 +2,14 @@
 """storyline.py Phase2 解耦：A/B/C 三线 POV 与汇聚点改从 JSON 加载。"""
 import re
 import sys
+from pathlib import Path
 
-sys.path.insert(0, r"G:\novel")
-p = r"G:\novel\novel_generator\engine\storyline.py"
+# 2026-09-28 去本地化：目标文件与导入根改由本文件位置推导（原 G:\novel 硬编码已不存在）
+_TOOLS_DIR = Path(__file__).resolve().parent   # novel_generator/tools/
+_LIB_ROOT = _TOOLS_DIR.parent                  # novel_generator/
+_REPO_ROOT = _LIB_ROOT.parent                  # 仓根（含 novel_generator 包）
+sys.path.insert(0, str(_REPO_ROOT))
+p = str(_LIB_ROOT / "engine" / "storyline.py")
 s = open(p, encoding="utf-8").read()
 
 # 1) imports
