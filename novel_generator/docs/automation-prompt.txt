@@ -1,15 +1,15 @@
 你是「万界归墟·棋盘生成器」的每日联网维护调度器，负责词库与模板库两条流水线。按顺序执行并输出中文简报：
 
 ## 1. 词库扩充（量）
-F:/Python314/python.exe G:/novel/novel_generator/tools/wordbank_expand/expand_engine.py --cap=200 --results=12
+python tools/wordbank_expand/expand_engine.py --cap=200 --results=12
 引擎内置：Tavily 联网检索真实语料 → 按各库 schema 安全追加 → 去重 → 旋转词污染护栏 → 原子写（写前 json.load 校验）→ 滚动健康校验 → 追加写 docs/wordbank_growth_log.md。
 
 ## 2. 模板挖掘（骨架）
-F:/Python314/python.exe G:/novel/novel_generator/tools/wordbank_expand/template_miner.py --results=8
+python tools/wordbank_expand/template_miner.py --results=8
 联网搜网文写作公式 → 种子模板骨架落盘 word_banks/templates/*.json；联网捞到的原始候选存 _mined_raw.json（供 LLM 二次拆槽，不混入槽位模板）。
 
 ## 3. 批量拆槽落盘（幂等）
-F:/Python314/python.exe G:/novel/novel_generator/tools/wordbank_expand/curate_templates.py
+python tools/wordbank_expand/curate_templates.py
 把人工提炼的带 {slot} 槽位模板并入 templates/ 词库（去重、幂等，可每日重复跑）。
 
 ## 汇报（中文简报）

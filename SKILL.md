@@ -1,6 +1,6 @@
 ---
 name: novel-generator
-description: Maintain the 《万界归墟》 event-driven novel generator (G:/ai/novel). World map + timeline + character simulation driven generation with task log.
+description: Maintain the 《万界归墟》 event-driven novel generator (以本 SKILL.md 所在仓库根为工作目录). World map + timeline + character simulation driven generation with task log.
 agent_created: true
 ---
 
