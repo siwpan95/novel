@@ -4,7 +4,7 @@ import re
 import sys
 from pathlib import Path
 
-# 2026-09-28 去本地化：目标文件与导入根改由本文件位置推导（原 G:\novel 硬编码已不存在）
+# 2026-09-23 去本地化：目标文件与导入根改由本文件位置推导（原 G:\novel 硬编码已不存在）
 _TOOLS_DIR = Path(__file__).resolve().parent   # novel_generator/tools/
 _LIB_ROOT = _TOOLS_DIR.parent                  # novel_generator/
 _REPO_ROOT = _LIB_ROOT.parent                  # 仓根（含 novel_generator 包）

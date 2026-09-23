@@ -34,7 +34,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from tavily_search import search  # noqa
 
-# 2026-09-28 去本地化：词库根改由本文件位置推导（原 G:/novel 硬编码已不存在）
+# 2026-09-23 去本地化：词库根改由本文件位置推导（原 G:/novel 硬编码已不存在）
 ROOT = str(Path(__file__).resolve().parents[2] / "word_banks")
 TPL_DIR = os.path.join(ROOT, "templates")
 
