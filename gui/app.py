@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """《万界归墟》GUI 服务 —— Flask + SSE 实时流式生成。
 
-工程参考：G:\radio（waitress 生产服务器 / 健康检查 / CORS / 优雅关闭）
+工程参考：同类电台服务端（waitress 生产服务器 / 健康检查 / CORS / 优雅关闭；原宿主目录已失效）
 
 启动: python gui/app.py
 访问: http://localhost:5000
