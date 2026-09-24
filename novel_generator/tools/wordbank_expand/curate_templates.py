@@ -13,7 +13,7 @@ import os
 import json
 from pathlib import Path
 
-# 2026-09-23 去本地化：templates 词库目录改由本文件位置推导（原 G:/novel 硬编码已不存在）
+# 2026-09-23 去本地化：templates 词库目录改由本文件位置推导（原硬编码已不存在）
 TPL_DIR = str(Path(__file__).resolve().parents[2] / "word_banks" / "templates")
 
 # ---------------------------------------------------------------------------
