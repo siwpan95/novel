@@ -1,35 +1,31 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# 统一换行：仓库内一律 LF，避免 Windows 上 CRLF 反复改动的噪声
+# 2026-09-28：本机 system 级 core.autocrlf=true 与本仓 LF blob 冲突，会产生
+# "git diff 为空却报 modified" 的幻影改动（repo_hygiene H8）；本文件显式钉住 eol=lf 以消除它。
+* text=auto eol=lf
 
-# Python files: LF line endings
-*.py text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.toml  text eol=lf
+*.cfg   text eol=lf
+*.ini   text eol=lf
+*.sh    text eol=lf
 
-# Config files: LF
-*.toml text eol=lf
-*.json text eol=lf
-*.yml text eol=lf
-*.yaml text eol=lf
-*.cfg text eol=lf
-
-# Documentation: LF
-*.md text eol=lf
-*.rst text eol=lf
-
-# Web: LF
-*.html text eol=lf
-*.css text eol=lf
-*.js text eol=lf
-
-# Shell: LF
-*.sh text eol=lf
-*.bash text eol=lf
-
-# Binary files
-*.ttf binary
-*.otf binary
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
-*.ico binary
-*.zip binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.mp3   binary
+*.wav   binary
+*.ogg   binary
+*.flac  binary
+*.zip   binary
+*.7z    binary
+*.exe   binary
+*.dll   binary
+*.so    binary
+*.pdf   binary
