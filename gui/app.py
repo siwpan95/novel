@@ -32,15 +32,15 @@ HTTP_PORT = 5000
 OUTPUT_DIR = os.path.join(_BASE, "output")
 LOG_FILE = os.path.join(_BASE, "gui_server.log")
 
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.engine.world_state import WorldStateManager
-from novel_generator.engine.timeline import Timeline
-from novel_generator.engine.storyline import StoryBoard, StoryBeat
-from novel_generator.engine.scene_director import SceneDirector
-from novel_generator.engine.integrated_chapter_generator import IntegratedChapterGenerator
-from novel_generator.engine.voice_engine import VoiceEngine
-from novel_generator.engine.wordcount_director import PRESETS, PRESET_CN, DEFAULT_WC_CONFIG
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.engine.world_state import WorldStateManager
+from wanjie.engine.timeline import Timeline
+from wanjie.engine.storyline import StoryBoard, StoryBeat
+from wanjie.engine.scene_director import SceneDirector
+from wanjie.engine.integrated_chapter_generator import IntegratedChapterGenerator
+from wanjie.engine.voice_engine import VoiceEngine
+from wanjie.engine.wordcount_director import PRESETS, PRESET_CN, DEFAULT_WC_CONFIG
 
 # ── Flask 初始化 ──
 app = Flask(__name__)

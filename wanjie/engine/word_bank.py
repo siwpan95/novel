@@ -1,18 +1,30 @@
-"""词库加载与随机选取引擎。
+"""词库加载与随机选取引擎（《万界归墟》内容层）。
 
-支持：
-- JSON词库文件的加载和缓存
-- 基于权重的随机选取
-- 半随机名字生成（姓氏固定挑选 + 名字字符随机组合）
-- 种子控制（可复现生成）
+通用内核不再自带，改为 import 已发布到 PyPI 的 ``novel-generator``
+（发行名 ``novel-generator`` / 导入名 ``novel_generator``）：
+
+    from novel_generator.engine.word_bank import WordBank   # 内核
+    class WordBank(_KernelWordBank): ...                    # 本文件
+
+**继承来的通用能力**（内核实现，本文件不重复）：
+``load`` / ``pick`` / ``pick_n`` / ``pick_without`` / ``pick_weighted`` /
+``pick_by_category`` / ``pick_fallback`` / ``pick_unique`` / ``clear_history`` /
+``pool`` / ``generate_name`` / ``generate_name_pair`` / ``get_rng`` / ``all_keys``。
+
+**本文件只保留《万界归墟》专属的三件事**：
+1. 词库目录指向本仓 ``word_banks/`` 的分类子目录（``resolve_bank_path``）；
+2. 术语前缀堆叠垃圾过滤（``_is_meaningless`` / ``_filter_pool``）；
+3. 拆分词库的合并读取（``load_world_senses`` / ``load_voice_helpers``）。
 """
 
 import json
-import random
 import re
 from pathlib import Path
 from typing import Optional
 
+from novel_generator.engine.word_bank import WordBank as _KernelWordBank
+
+# 本仓词库目录（覆盖内核自带的 word_banks/）
 WORD_BANK_DIR = Path(__file__).parent.parent / "word_banks"
 
 # 术语前缀词表：用于识别「纯前缀堆叠」垃圾（如 远古远古远古、远古混沌混沌）。
@@ -73,18 +85,19 @@ def resolve_bank_path(bank_name: str) -> Path:
     raise FileNotFoundError(f"词库文件不存在: {flat}（含子目录递归搜索）")
 
 
-class WordBank:
-    """词库管理器：加载、缓存、随机选取。"""
+class WordBank(_KernelWordBank):
+    """《万界归墟》词库管理器：内核 WordBank + 本仓专属数据 / 过滤 / 合并。"""
 
-    def __init__(self, seed: Optional[int] = None):
+    def __init__(self, seed: Optional[int] = None, repetition_window: int = 8):
+        super().__init__(seed=seed, repetition_window=repetition_window)
         self._seed_value = seed
-        self._cache: dict[str, dict] = {}
-        self._rng = random.Random(seed)
 
     @property
     def seed(self) -> Optional[int]:
-        """返回初始化时传入的主种子（可能为 None）。"""
+        """返回初始化时传入的主种子（可能为 None）。内核无此属性，此处补齐。"""
         return self._seed_value
+
+    # ───── 覆写：词库目录指向本仓 ─────
 
     def load(self, bank_name: str) -> dict:
         """加载指定词库JSON文件（带缓存）。"""
@@ -96,6 +109,8 @@ class WordBank:
             data = json.load(f)
         self._cache[bank_name] = data
         return data
+
+    # ───── 覆写：选取时叠加「前缀堆叠垃圾」过滤 ─────
 
     def pick(self, bank_name: str, key: str) -> str:
         """从词库的指定key中随机挑选一项（自动跳过纯前缀堆叠垃圾）。"""
@@ -123,32 +138,7 @@ class WordBank:
             return self._rng.choice(_filter_pool(data[key]))  # fallback
         return self._rng.choice(pool)
 
-    def generate_name(self, length: int = 2, surname: Optional[str] = None) -> str:
-        """半随机生成中文名字。
-
-        - 姓氏：可指定或随机选
-        - 名字：从名字用字池中随机组合指定长度
-        """
-        data = self.load("names")
-        if surname is None:
-            surname = self._rng.choice(data["surnames"])
-
-        given_chars = self._rng.sample(data["given_name_chars"], length)
-        given_name = "".join(given_chars)
-        return f"{surname}{given_name}"
-
-    def generate_name_pair(self, gender_hint: str = "neutral") -> tuple[str, str]:
-        """生成一对名字（可指定性别倾向）。"""
-        return self.generate_name(), self.generate_name()
-
-    def get_rng(self) -> random.Random:
-        """获取内部随机数生成器。"""
-        return self._rng
-
-    def all_keys(self, bank_name: str) -> list[str]:
-        """获取词库中所有键名。"""
-        data = self.load(bank_name)
-        return list(data.keys())
+    # ───── 本仓专属：拆分词库的合并读取 ─────
 
     def load_world_senses(self) -> dict:
         """合并拆分后的世界五感词库。

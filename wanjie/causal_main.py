@@ -1,6 +1,6 @@
 """《万界归墟》因果链路小说生成器 - 主入口。
 
-⚠️ DEPRECATED — 推荐使用 python main.py（字数目标生成）或 python -m novel_generator --mode causal。
+⚠️ DEPRECATED — 推荐使用 python main.py（字数目标生成）或 python -m wanjie --mode causal。
   本文件中的 generate_volume_1() / run_polish_demo() 等功能应迁入 unified_engine.py。
   保留原因：向后兼容 + 独立因果链测试。
   完全移除时间：v3.0。
@@ -11,7 +11,7 @@
 
 import warnings
 warnings.warn(
-    'novel_generator.causal_main 已废弃，请使用 python -m novel_generator --mode causal',
+    'wanjie.causal_main 已废弃，请使用 python -m wanjie --mode causal',
     DeprecationWarning,
     stacklevel=2,
 )
@@ -23,11 +23,11 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.engine.causal_chapter import CausalChapterGenerator
-from novel_generator.engine.rubric_player import RubricEngine
-from novel_generator.engine.llm_rewrite import LLMPolishEngine, InteractiveOutline, POLISH_PROMPTS
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.engine.causal_chapter import CausalChapterGenerator
+from wanjie.engine.rubric_player import RubricEngine
+from wanjie.engine.llm_rewrite import LLMPolishEngine, InteractiveOutline, POLISH_PROMPTS
 
 
 def run_polish_demo(seed=42, output_dir=None):
@@ -65,7 +65,7 @@ def run_polish_demo(seed=42, output_dir=None):
     preview = POLISH_PROMPTS[prompt_key].format(text=chapter[:200] + '...')[:300]
     print(preview)
     print()
-    print('使用方式: python -m novel_generator.causal_main --polish')
+    print('使用方式: python -m wanjie.causal_main --polish')
     print('         (润色当前使用本地占位模式；接入外部 LLM 请通过环境变量配置)')
 
 
@@ -82,7 +82,7 @@ def run_interactive(seed=42, output_dir=None):
             prompt = io.format_prompt(ch_num)
             print(prompt)
 
-    print('使用方式: python -m novel_generator.causal_main --interactive')
+    print('使用方式: python -m wanjie.causal_main --interactive')
     print('         在分叉点输入A/B/C选择故事走向')
 
 
@@ -256,7 +256,7 @@ def main():
     generate_volume_1(args.output, args.seed)
     print("\n✓ 小说生成完毕。")
     print("  下一卷需等第一卷确认后续大纲后继续。")
-    print("  可运行 python -m novel_generator --diagnose 查看引擎诊断报告。")
+    print("  可运行 python -m wanjie --diagnose 查看引擎诊断报告。")
 
 
 if __name__ == "__main__":

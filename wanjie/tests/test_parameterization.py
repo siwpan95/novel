@@ -14,9 +14,9 @@ import types
 
 import pytest
 
-from novel_generator.engine.beat_orchestrator import BeatOrchestrator
-from novel_generator.engine.beat_narratives import BeatNarrativeLoader
-from novel_generator.engine.word_bank import resolve_bank_path
+from wanjie.engine.beat_orchestrator import BeatOrchestrator
+from wanjie.engine.beat_narratives import BeatNarrativeLoader
+from wanjie.engine.word_bank import resolve_bank_path
 
 NARR_PATH = resolve_bank_path('beat_narratives')
 

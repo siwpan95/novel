@@ -24,15 +24,15 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal, QObject, QThread
 from PyQt5.QtGui import QFont, QColor, QPalette, QTextCursor, QFontDatabase
 
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.engine.world_state import WorldStateManager
-from novel_generator.engine.timeline import Timeline
-from novel_generator.engine.storyline import StoryBoard, StoryBeat
-from novel_generator.engine.scene_director import SceneDirector
-from novel_generator.engine.integrated_chapter_generator import IntegratedChapterGenerator
-from novel_generator.engine.voice_engine import VoiceEngine
-from novel_generator.engine.wordcount_director import PRESETS, DEFAULT_WC_CONFIG
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.engine.world_state import WorldStateManager
+from wanjie.engine.timeline import Timeline
+from wanjie.engine.storyline import StoryBoard, StoryBeat
+from wanjie.engine.scene_director import SceneDirector
+from wanjie.engine.integrated_chapter_generator import IntegratedChapterGenerator
+from wanjie.engine.voice_engine import VoiceEngine
+from wanjie.engine.wordcount_director import PRESETS, DEFAULT_WC_CONFIG
 
 PRESET_CN = {'短篇': 20000, '中篇': 50000, '长篇': 200000}
 

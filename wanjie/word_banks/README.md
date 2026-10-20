@@ -66,7 +66,7 @@ word_banks/
 
 1. 在合适的分类子目录下新建 `<name>.json`，形如 `{"description": "...", "key1": [...], ...}`。
 2. 引擎侧用 `WordBank.load("<name>")` / `pick("<name>", "key1")` 消费即可，无需改加载器。
-3. 若需为某引擎模块提供固定文件名引用，用 `from novel_generator.engine.word_bank import resolve_bank_path`
+3. 若需为某引擎模块提供固定文件名引用，用 `from wanjie.engine.word_bank import resolve_bank_path`
    取路径（不要写死子目录）。
 
 ## 如何扩充一个词库
@@ -79,7 +79,7 @@ word_banks/
 ## 重新生成清单
 
 ```bash
-python novel_generator/word_banks/build_manifest.py
+python wanjie/word_banks/build_manifest.py
 ```
 
 会刷新 `content_manifest.json`（自动排除自身，可重复运行）。

@@ -23,7 +23,7 @@ sys.path.insert(0, HERE)
 from tavily_search import search  # noqa
 
 # 2026-09-23 去本地化：词库根与增长日志改由本文件位置推导（原硬编码已不存在）
-_LIB_ROOT = Path(__file__).resolve().parents[2]   # novel_generator/
+_LIB_ROOT = Path(__file__).resolve().parents[2]   # wanjie/
 ROOT = str(_LIB_ROOT / "word_banks")
 LOG_PATH = str(_LIB_ROOT / "docs" / "wordbank_growth_log.md")
 

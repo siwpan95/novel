@@ -11,14 +11,14 @@
 import random
 from collections import Counter
 
-from novel_generator.engine.dealer import Dealer
-from novel_generator.engine.emergent_orchestrator import EmergentOrchestrator, OP_TYPE_POOL
-from novel_generator.engine.narrative_state import NarrativeState, PASSAGE_TYPES
+from wanjie.engine.dealer import Dealer
+from wanjie.engine.emergent_orchestrator import EmergentOrchestrator, OP_TYPE_POOL
+from wanjie.engine.narrative_state import NarrativeState, PASSAGE_TYPES
 
 
 def _make_orch(config_overrides: dict = None) -> EmergentOrchestrator:
     """构造一个最小 EmergentOrchestrator（无需真实 VoiceEngine）。"""
-    from novel_generator.engine.wordcount_director import DEFAULT_WC_CONFIG
+    from wanjie.engine.wordcount_director import DEFAULT_WC_CONFIG
 
     cfg = dict(DEFAULT_WC_CONFIG)
     if config_overrides:
@@ -110,7 +110,7 @@ def test_plan_op_types_all_from_uniform_pool():
     for _ in range(80):
         for op in orch.plan(ctx, state).ops:
             seen.add(op.op_type)
-    from novel_generator.engine.beat_orchestrator import OpType
+    from wanjie.engine.beat_orchestrator import OpType
     valid = {OpType.SCENE, OpType.ACTION, OpType.BATTLE, OpType.DIALOGUE, OpType.REVEAL}
     assert seen == valid, f'算子类型集合应为均匀池: {seen}'
 

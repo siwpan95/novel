@@ -17,11 +17,11 @@ import os
 import random
 from collections import Counter
 
-from novel_generator.engine.voice_engine import VoiceEngine
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.unified_engine import UnifiedNovelEngine
-from novel_generator.engine.dealer import MarkovTransitions, SimHashDedup
+from wanjie.engine.voice_engine import VoiceEngine
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.unified_engine import UnifiedNovelEngine
+from wanjie.engine.dealer import MarkovTransitions, SimHashDedup
 
 
 def _new_voice(seed=11):
@@ -202,7 +202,7 @@ def test_deal_markov_invariants_and_determinism():
     for _ in range(10):
         seq += ['a', 'b', 'c', 'd', 'e']
     # 转移矩阵键必须与生成端一致：用 item_key 哈希（真实 bootstrap 也如此）
-    from novel_generator.engine.dealer import item_key
+    from wanjie.engine.dealer import item_key
     log = [('m::q', item_key(s, pool)) for s in seq[:-1]]
     mk.build_from_log(log)
 
@@ -444,7 +444,7 @@ def test_stress_markov_long_chain():
     pool = [chr(ord('A') + i) for i in range(n)]
     # 构造 A→B→C→…→T→A 的密集转移（每对 8 次）
     mk = MarkovTransitions({'enabled': True, 'order': 1})
-    from novel_generator.engine.dealer import item_key
+    from wanjie.engine.dealer import item_key
     seq_raw = []
     for _ in range(8):
         seq_raw.extend(pool)

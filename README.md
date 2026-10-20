@@ -4,6 +4,33 @@
 
 双引擎程序化中文小说生成系统——融合 ASP 模板流（词库驱动多层嵌套循环）与因果链流（Save the Cat! 15 节拍叙事结构），自动生成莲花式地图诸天无限流长篇小说。
 
+## 📦 包名与内核依赖
+
+本项目**服务于《万界归墟》这一部特定作品**（世界观、词库、节拍全部绑定），
+因此**不发布到 PyPI**——完成度再高，通用性也有限。通用内核单独拆出并已发布：
+
+| | 发行名（PyPI） | 导入名 | 定位 |
+|---|---|---|---|
+| **内核**（已发布） | [`novel-generator`](https://pypi.org/project/novel-generator/) | `novel_generator` | 通用 ASP 模板流引擎 |
+| **本项目**（不发布） | — | `wanjie` | 《万界归墟》专属内容层 |
+
+`wanjie` 以**依赖 + 继承**的方式复用内核，不再自带通用实现：
+
+```python
+from novel_generator.engine.word_bank import WordBank      # 内核基类
+from wanjie.engine.word_bank import WordBank                # 本仓子类
+```
+
+- `wanjie.engine.word_bank.WordBank` 继承内核 `WordBank`，只覆写三件事：
+  词库目录指向本仓 `wanjie/word_banks/`、术语前缀堆叠垃圾过滤、拆分词库合并读取；
+- `wanjie.engine.template.TemplateEngine` 继承内核 `TemplateEngine`，
+  保留本仓模板方言（`{{bank.key[N]}}` / `{{bank.key:unique}}` / `{{bank.key,3}}`），
+  同时获得内核的修饰符系统与状态变量。
+
+> **3.0.0 之前本仓的包名也叫 `novel_generator`**。内核发布后两者导入名撞车，
+> 按「以 PyPI 为准」的口径：`novel_generator` 归内核，本仓改为 `wanjie`
+> （取自《万界归墟》，且本仓词库早已有 `world/wanjie_context.json`）。
+
 ## 🚀 快速开始
 
 ```bash
@@ -16,9 +43,11 @@ pip install -e "."
 python main.py                                      # 默认 tiny（2 万字）快速验证
 python main.py --preset book                        # 整书 20 万字
 python main.py --target-chars 80000                 # 自定义目标字数
-python -m novel_generator                           # 交互式菜单（含 asp / causal）
-python -m novel_generator --diagnose                # 诊断报告
+python -m wanjie                                   # 交互式菜单（含 asp / causal）
+python -m wanjie --diagnose                        # 诊断报告
 ```
+
+> `pip install -e "."` 会自动拉入内核依赖 `novel-generator>=2.0.0`。
 
 ## 🧠 核心架构
 
@@ -41,7 +70,8 @@ python -m novel_generator --diagnose                # 诊断报告
 
 | 文档 | 内容 |
 |------|------|
-| [ARCHITECTURE.md](novel_generator/ARCHITECTURE.md) | 引擎架构详解 |
+| [ARCHITECTURE.md](wanjie/ARCHITECTURE.md) | 引擎架构详解 |
+| [docs/WORD_BANK_GUIDE.md](docs/WORD_BANK_GUIDE.md) | 词库结构与扩词指南 |
 | [spec/Novel-Bible.md](spec/Novel-Bible.md) | 万界归墟世界观设计圣经 |
 | [spec/Research-Report-Enhancement-Plan.md](spec/Research-Report-Enhancement-Plan.md) | 调研报告与强化方案 |
 | [spec/Volume-2-3-Expansion-Plan.md](spec/Volume-2-3-Expansion-Plan.md) | 多卷展开方案 |
@@ -61,9 +91,9 @@ python -m novel_generator --diagnose                # 诊断报告
 
 ```bash
 pip install -e ".[dev]"
-pytest --cov=novel_generator
-ruff check novel_generator/
-mypy novel_generator/
+pytest --cov=wanjie
+ruff check wanjie/
+mypy wanjie/
 ```
 
 ## 📄 许可证

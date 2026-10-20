@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pytest
 
-from novel_generator.engine.word_bank import WordBank
+from wanjie.engine.word_bank import WordBank
 
 
 @pytest.fixture
@@ -21,7 +21,7 @@ def seeded_wb():
 @pytest.fixture
 def wb_with_temp_bank():
     """带临时测试词库的 WordBank。"""
-    import novel_generator.engine.word_bank as wb_mod
+    import wanjie.engine.word_bank as wb_mod
     original_dir = wb_mod.WORD_BANK_DIR
 
     with tempfile.TemporaryDirectory() as tmpdir:

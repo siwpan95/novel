@@ -9,4 +9,4 @@ WORKDIR /app
 COPY . .
 
 # 默认运行深度融合模式（可通过 docker run 覆盖 CMD）
-CMD ["python", "-m", "novel_generator", "--mode", "integrated", "--chapters", "80"]
+CMD ["python", "-m", "wanjie", "--mode", "integrated", "--chapters", "80"]

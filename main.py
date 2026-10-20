@@ -57,18 +57,18 @@ def _print_safe(text: str) -> None:
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.engine.world_state import WorldStateManager
-from novel_generator.engine.timeline import Timeline
-from novel_generator.engine.storyline import StoryBoard
-from novel_generator.engine.scene_director import SceneDirector
-from novel_generator.engine.integrated_chapter_generator import IntegratedChapterGenerator
-from novel_generator.engine.wordcount_director import PRESETS, PRESET_CN, DEFAULT_WC_CONFIG
-from novel_generator.engine.voice_engine import VoiceEngine
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.engine.world_state import WorldStateManager
+from wanjie.engine.timeline import Timeline
+from wanjie.engine.storyline import StoryBoard
+from wanjie.engine.scene_director import SceneDirector
+from wanjie.engine.integrated_chapter_generator import IntegratedChapterGenerator
+from wanjie.engine.wordcount_director import PRESETS, PRESET_CN, DEFAULT_WC_CONFIG
+from wanjie.engine.voice_engine import VoiceEngine
 
 # 保留旧版入口以向后兼容
-from novel_generator.unified_engine import UnifiedNovelEngine
+from wanjie.unified_engine import UnifiedNovelEngine
 
 _logger = None
 
@@ -80,7 +80,7 @@ def _get_logger():
         _logger = logging.getLogger('novel.main')
         _logger.setLevel(logging.DEBUG)
         if not _logger.handlers:
-            _fh = logging.FileHandler('novel_generator.log', encoding='utf-8')
+            _fh = logging.FileHandler('wanjie.log', encoding='utf-8')
             _fh.setLevel(logging.DEBUG)
             _fh.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s] %(name)s: %(message)s'))
             _logger.addHandler(_fh)

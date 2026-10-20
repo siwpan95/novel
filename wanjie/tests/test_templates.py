@@ -5,8 +5,8 @@
 2. BattleGenerator 从词库加载额外模板 + 槽位值池（接入生效，池变长）。
 3. 槽位值可从 battle_slots 词库读取（拆硬编码 → 词库）。
 """
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.generators.battle import BattleGenerator
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.generators.battle import BattleGenerator
 
 
 def test_template_banks_exist_and_slotted():
@@ -45,7 +45,7 @@ def test_battle_generator_loads_bank_templates_and_slots():
 
 
 def test_dialogue_generator_loads_bank_templates_and_slots():
-    from novel_generator.engine.generators.dialogue import DialogueGenerator
+    from wanjie.engine.generators.dialogue import DialogueGenerator
     wb = WordBank(seed=7)
     dg = DialogueGenerator(wb)
     # 词库追加：应大于硬编码基线 7
@@ -56,7 +56,7 @@ def test_dialogue_generator_loads_bank_templates_and_slots():
 
 
 def test_scene_generator_loads_directions():
-    from novel_generator.engine.generators.battle import SceneGenerator
+    from wanjie.engine.generators.battle import SceneGenerator
     wb = WordBank(seed=7)
     sg = SceneGenerator(wb)
     assert sg._directions and "南方" in sg._directions
@@ -64,7 +64,7 @@ def test_scene_generator_loads_directions():
 
 
 def test_character_generator_loads_intro_templates_and_slots():
-    from novel_generator.engine.generators.character import CharacterGenerator
+    from wanjie.engine.generators.character import CharacterGenerator
     wb = WordBank(seed=7)
     cg = CharacterGenerator(wb)
     assert cg._intro_templates

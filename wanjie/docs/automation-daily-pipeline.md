@@ -6,7 +6,7 @@
 
 ## 更新后的 prompt（覆盖原 prompt）
 
-> 下列命令的工作目录为仓库内的 `novel_generator/`（即下方 `cwds`），解释器用 PATH 中的 `python`；
+> 下列命令的工作目录为仓库内的 `wanjie/`（即下方 `cwds`），解释器用 PATH 中的 `python`；
 > 脚本根目录由脚本自身位置推导（`Path(__file__).parents[2]`），无需再传绝对路径。
 
 ```
@@ -38,7 +38,7 @@ python tools/wordbank_expand/curate_templates.py
 - automation_id：`automation-1786318733060`
 - name：`词库扩充+模板挖掘（每日 · 双流水线）`
 - prompt：如上
-- status / rrule / cwds 保持不变（rrule 当前为 `FREQ=HOURLY;INTERVAL=1`，若无需如此频繁可改回 `FREQ=DAILY;BYHOUR=3;BYMINUTE=0`；cwds=`<仓库根>\novel_generator`，即上面命令的工作目录）。
+- status / rrule / cwds 保持不变（rrule 当前为 `FREQ=HOURLY;INTERVAL=1`，若无需如此频繁可改回 `FREQ=DAILY;BYHOUR=3;BYMINUTE=0`；cwds=`<仓库根>\wanjie`，即上面命令的工作目录）。
 
 ## 流水线脚本清单（均已就位）
 | 脚本 | 职责 |

@@ -9,8 +9,8 @@ from pathlib import Path
 
 import pytest
 
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.template import TemplateEngine
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.template import TemplateEngine
 
 
 @pytest.fixture
@@ -30,7 +30,7 @@ def mock_word_bank():
                 '场景': ['幽暗的', '明亮的', '阴森的'],
             },
         }
-        import novel_generator.engine.word_bank as wb_mod
+        import wanjie.engine.word_bank as wb_mod
         original_dir = wb_mod.WORD_BANK_DIR
         bank_dir = Path(tmpdir) / 'word_banks'
         os.makedirs(str(bank_dir), exist_ok=True)

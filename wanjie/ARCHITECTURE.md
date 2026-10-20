@@ -18,7 +18,7 @@
 ## 二、项目结构
 
 ```
-novel_generator/
+wanjie/
 ├── __init__.py                              # 包初始化
 ├── __main__.py                              # ★ 统一入口（CLI + 交互式菜单）
 ├── main.py                                  # 旧版入口（ASP 演示，向后兼容）
@@ -337,36 +337,36 @@ opening → theme → inciting → debate → break_1 → b_story
 **（1）字数目标生成（words，★推荐默认）**
 ```bash
 python main.py --preset book
-# 或：python -m novel_generator --mode words --preset book
+# 或：python -m wanjie --mode words --preset book
 # 以字数为目标、状态驱动的涌现式生成；取消章/卷/大纲，弱化罐头感
 # 输出有因果一致性且每次文字不同的长篇小说
 ```
 
 **（2）因果链流模式（causal，旧版兼容）**
 ```bash
-python -m novel_generator --mode causal --chapters 80
+python -m wanjie --mode causal --chapters 80
 # 使用旧版 CausalChapterGenerator（硬编码文本，每次输出相同）
 # ⚠️ 已标记 DEPRECATED，v3.0 将移除，推荐使用 words
 ```
 
 **（3）ASP 模板流模式（asp，海量批量）**
 ```bash
-python -m novel_generator --mode asp -v 3 -c 7 -o 4
+python -m wanjie --mode asp -v 3 -c 7 -o 4
 # 纯多层嵌套循环 + 词库随机替换
 # 适用场景：海量文本批量生成、词库效果演示
 ```
 
 **其他快捷操作：**
 ```bash
-python main.py --diagnose                       # 引擎诊断报告（或 -m novel_generator --diagnose）
+python main.py --diagnose                       # 引擎诊断报告（或 -m wanjie --diagnose）
 python main.py --resume                         # 断点续写
-python -m novel_generator                       # 交互式菜单（最友好）
+python -m wanjie                       # 交互式菜单（最友好）
 ```
 
 ### 7.3 Python API
 
 ```python
-from novel_generator.unified_engine import UnifiedNovelEngine
+from wanjie.unified_engine import UnifiedNovelEngine
 
 engine = UnifiedNovelEngine(seed=42)
 

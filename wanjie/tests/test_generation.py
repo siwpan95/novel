@@ -7,8 +7,8 @@
 """
 import os
 
-from novel_generator.unified_engine import UnifiedNovelEngine
-from novel_generator.engine.text_quality import TextQualityPipeline
+from wanjie.unified_engine import UnifiedNovelEngine
+from wanjie.engine.text_quality import TextQualityPipeline
 
 
 # ---------------------------------------------------------------------------
@@ -80,7 +80,7 @@ def test_ai_tell_scrub():
 # 单元：章末钩子生成（研究驱动多类型 + 去重）
 # ---------------------------------------------------------------------------
 def _hook_pool():
-    from novel_generator.engine.word_bank import resolve_bank_path
+    from wanjie.engine.word_bank import resolve_bank_path
     import json
     data = json.loads(resolve_bank_path('hook_templates').read_text(encoding='utf-8'))
     pool = set()
@@ -91,10 +91,10 @@ def _hook_pool():
 
 
 def test_render_hook_returns_pool_and_dedups():
-    from novel_generator.engine.voice_engine import VoiceEngine
-    from novel_generator.engine.narrative_context import NarrativeContext
-    from novel_generator.engine.word_bank import WordBank
-    from novel_generator.engine.plot_state import PlotState
+    from wanjie.engine.voice_engine import VoiceEngine
+    from wanjie.engine.narrative_context import NarrativeContext
+    from wanjie.engine.word_bank import WordBank
+    from wanjie.engine.plot_state import PlotState
     import tempfile
     tmp = tempfile.mkdtemp()
     ve = VoiceEngine(WordBank(seed=3), PlotState(save_path=tmp + '/ps.json'), seed=3)
@@ -117,10 +117,10 @@ def test_render_hook_returns_pool_and_dedups():
 
 
 def test_render_hook_context_type_selection():
-    from novel_generator.engine.voice_engine import VoiceEngine
-    from novel_generator.engine.narrative_context import NarrativeContext
-    from novel_generator.engine.word_bank import WordBank
-    from novel_generator.engine.plot_state import PlotState
+    from wanjie.engine.voice_engine import VoiceEngine
+    from wanjie.engine.narrative_context import NarrativeContext
+    from wanjie.engine.word_bank import WordBank
+    from wanjie.engine.plot_state import PlotState
     import tempfile
     tmp = tempfile.mkdtemp()
     ve = VoiceEngine(WordBank(seed=5), PlotState(save_path=tmp + '/ps.json'), seed=5)
@@ -141,10 +141,10 @@ def test_render_hook_context_type_selection():
 
 def test_render_world_entry_injects_genre_atmosphere():
     """render_world_entry 从各世界专用词库（全键合并）抽取氛围描写——不再限于单一 atmosphere 键。"""
-    from novel_generator.engine.voice_engine import VoiceEngine
-    from novel_generator.engine.word_bank import WordBank
-    from novel_generator.engine.plot_state import PlotState
-    from novel_generator.engine.word_bank import resolve_bank_path
+    from wanjie.engine.voice_engine import VoiceEngine
+    from wanjie.engine.word_bank import WordBank
+    from wanjie.engine.plot_state import PlotState
+    from wanjie.engine.word_bank import resolve_bank_path
     import json
     import tempfile
     tmp = tempfile.mkdtemp()

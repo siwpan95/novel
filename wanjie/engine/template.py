@@ -2,6 +2,18 @@
 
 这是"ASP多层嵌套循环替换关键字"写法的核心实现。
 
+通用内核来自已发布到 PyPI 的 ``novel-generator``（导入名 ``novel_generator``）：
+
+    from novel_generator.engine.template import TemplateEngine   # 内核
+    class TemplateEngine(_KernelTemplateEngine): ...             # 本文件
+
+**继承来的通用能力**（内核实现）：修饰符系统（``:w`` / ``:c=`` / ``:u`` /
+``:f=`` / ``:e=`` / ``:n=``）、状态变量（``set_var`` / ``get_var`` /
+``clear_vars``）、条件分支、上下文缓存，以及 ``resolve`` /
+``resolve_with_context`` / ``batch_resolve`` / ``template``。
+
+**本文件保留《万界归墟》自身的模板方言**（内核 ``fill`` 不支持，故覆写）：
+
 模板语法：
 - {{bank.key}}          → 从词库随机取一项（每次调用可能不同）
 - {{bank.key[N]}}       → 从词库取第N项（确定性）
@@ -13,13 +25,16 @@
 
 import re
 from typing import Optional
+
+from novel_generator.engine.template import TemplateEngine as _KernelTemplateEngine
 from .word_bank import WordBank
 
 
-class TemplateEngine:
-    """模板填充引擎。"""
+class TemplateEngine(_KernelTemplateEngine):
+    """《万界归墟》模板填充引擎：内核 TemplateEngine + 本仓模板方言。"""
 
     def __init__(self, word_bank: WordBank):
+        super().__init__(word_bank)
         self._wb = word_bank
         self._used: dict[str, set] = {}  # 跟踪已使用项（用于unique模式）
 

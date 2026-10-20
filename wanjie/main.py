@@ -1,6 +1,6 @@
 """主入口（已废弃）：v1.0 兼容入口，实际已整合到 UnifiedNovelEngine。
 
-⚠️ DEPRECATED — 推荐使用 python -m novel_generator 启动统一的 v2.1 入口。
+⚠️ DEPRECATED — 推荐使用 python -m wanjie 启动统一的 v2.1 入口。
   本文件中的 demo_single_chapter() / demo_single_character() 仍可通过
   __main__.py 的交互式菜单（选项 6）访问，但不应作为独立入口使用。
 
@@ -18,10 +18,10 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from novel_generator.engine.generators.novel import NovelGenerator
-from novel_generator.engine.generators.character import CharacterGenerator
-from novel_generator.engine.generators.chapter import ChapterGenerator
-from novel_generator.engine.word_bank import WordBank
+from wanjie.engine.generators.novel import NovelGenerator
+from wanjie.engine.generators.character import CharacterGenerator
+from wanjie.engine.generators.chapter import ChapterGenerator
+from wanjie.engine.word_bank import WordBank
 
 
 def demo_single_chapter():
@@ -124,10 +124,10 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 示例：
-  python -m novel_generator.main --demo-chapter    # 生成单章样本
-  python -m novel_generator.main --demo-character   # 演示角色生成
-  python -m novel_generator.main -v 3 -c 7 -o 4    # 生成3部小说
-  python -m novel_generator.main                    # 交互式菜单
+  python -m wanjie.main --demo-chapter    # 生成单章样本
+  python -m wanjie.main --demo-character   # 演示角色生成
+  python -m wanjie.main -v 3 -c 7 -o 4    # 生成3部小说
+  python -m wanjie.main                    # 交互式菜单
         """,
     )
 

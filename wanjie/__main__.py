@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-"""《万界归墟》小说生成器 — 统一入口（python -m novel_generator）。
+"""《万界归墟》小说生成器 — 统一入口（python -m wanjie）。
 
 注意：字数目标生成的主入口已迁移到仓库根目录的 main.py（即 `python main.py`）。
 本文件保留为统一的模块入口与交互式菜单，兼容 asp / causal 旧引擎。
 
 模式：
-  python -m novel_generator --mode words --preset small   # 字数目标生成（★推荐）
-  python -m novel_generator --mode asp -v 3 -c 7 -o 4      # ASP模板流
-  python -m novel_generator --mode causal --chapters 80    # 因果链流（旧版兼容）
-  python -m novel_generator --diagnose                     # 诊断报告
-  python -m novel_generator                                # 交互式菜单
+  python -m wanjie --mode words --preset small   # 字数目标生成（★推荐）
+  python -m wanjie --mode asp -v 3 -c 7 -o 4      # ASP模板流
+  python -m wanjie --mode causal --chapters 80    # 因果链流（旧版兼容）
+  python -m wanjie --diagnose                     # 诊断报告
+  python -m wanjie                                # 交互式菜单
 """
 
 import argparse
@@ -18,8 +18,8 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from novel_generator.unified_engine import UnifiedNovelEngine
-from novel_generator.engine.wordcount_director import PRESETS
+from wanjie.unified_engine import UnifiedNovelEngine
+from wanjie.engine.wordcount_director import PRESETS
 
 
 def interactive_menu():
@@ -65,7 +65,7 @@ def interactive_menu():
         engine = UnifiedNovelEngine(seed=42)
         print(engine.diagnostic_report())
     elif choice == '5':
-        from novel_generator.main import demo_single_chapter, demo_single_character
+        from wanjie.main import demo_single_chapter, demo_single_character
         sub = input('  1.单章样本 / 2.角色样本 [默认1]: ').strip() or '1'
         if sub == '1':
             demo_single_chapter()
@@ -81,10 +81,10 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
             '示例：\n'
-            '  python -m novel_generator --mode words --preset small\n'
-            '  python -m novel_generator --mode asp -v 3 -c 7 -o 4\n'
-            '  python -m novel_generator --mode causal --chapters 80\n'
-            '  python -m novel_generator --diagnose\n'
+            '  python -m wanjie --mode words --preset small\n'
+            '  python -m wanjie --mode asp -v 3 -c 7 -o 4\n'
+            '  python -m wanjie --mode causal --chapters 80\n'
+            '  python -m wanjie --diagnose\n'
         ),
     )
     parser.add_argument('--mode', type=str, default=None,

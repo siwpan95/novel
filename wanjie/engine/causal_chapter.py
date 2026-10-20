@@ -15,7 +15,7 @@ from .generators.battle import BattleGenerator, SceneGenerator
 from .rhythm_engine import RhythmEngine
 
 
-from novel_generator.engine.beat_constants import BEAT_NAMES_CN, resolve_world, derive_seed
+from wanjie.engine.beat_constants import BEAT_NAMES_CN, resolve_world, derive_seed
 
 
 class CausalChapterGenerator:

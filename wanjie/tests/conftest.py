@@ -9,8 +9,8 @@ import pytest
 # 将项目根目录加入 sys.path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.engine.word_bank import WordBank
 
 
 @pytest.fixture

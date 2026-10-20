@@ -23,12 +23,12 @@ import logging
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # 日志配置：同时输出到控制台和文件
-logger = logging.getLogger('novel_generator')
+logger = logging.getLogger('wanjie')
 logger.setLevel(logging.DEBUG)
 if not logger.handlers:
     _fh = logging.FileHandler(
         os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                     'novel_generator.log'),
+                     'wanjie.log'),
         encoding='utf-8'
     )
     _fh.setLevel(logging.DEBUG)
@@ -41,25 +41,25 @@ if not logger.handlers:
     logger.addHandler(_fh)
     logger.addHandler(_ch)
 
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.engine.generators.novel import NovelGenerator
-from novel_generator.engine.generators.character import CharacterGenerator
-from novel_generator.engine.generators.chapter import ChapterGenerator
-from novel_generator.engine.generators.battle import BattleGenerator, SceneGenerator
-from novel_generator.engine.causal_chapter import CausalChapterGenerator
-from novel_generator.engine.integrated_chapter_generator import IntegratedChapterGenerator
-from novel_generator.engine.rubric_player import RubricEngine, PlayerArchetypeEngine, FamousSceneEngine
-from novel_generator.engine.text_quality import TextQualityPipeline
-from novel_generator.engine.rashomon import RashomonEngine, InfoMatrix
-from novel_generator.engine.expansion import ExpansionEngine, WorldSenseInjector
-from novel_generator.engine.rhythm_engine import RhythmEngine
-from novel_generator.engine.fusion_generator import FusionGenerator
-from novel_generator.engine.dealer import MarkovTransitions
-from novel_generator.engine.wordcount_director import (
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.engine.generators.novel import NovelGenerator
+from wanjie.engine.generators.character import CharacterGenerator
+from wanjie.engine.generators.chapter import ChapterGenerator
+from wanjie.engine.generators.battle import BattleGenerator, SceneGenerator
+from wanjie.engine.causal_chapter import CausalChapterGenerator
+from wanjie.engine.integrated_chapter_generator import IntegratedChapterGenerator
+from wanjie.engine.rubric_player import RubricEngine, PlayerArchetypeEngine, FamousSceneEngine
+from wanjie.engine.text_quality import TextQualityPipeline
+from wanjie.engine.rashomon import RashomonEngine, InfoMatrix
+from wanjie.engine.expansion import ExpansionEngine, WorldSenseInjector
+from wanjie.engine.rhythm_engine import RhythmEngine
+from wanjie.engine.fusion_generator import FusionGenerator
+from wanjie.engine.dealer import MarkovTransitions
+from wanjie.engine.wordcount_director import (
     WordCountDirector, DEFAULT_WC_CONFIG, PRESETS, AVG_CHARS_PER_CHAPTER,
 )
-from novel_generator.engine.emergent_orchestrator import EmergentOrchestrator
+from wanjie.engine.emergent_orchestrator import EmergentOrchestrator
 
 
 class UnifiedNovelEngine:
@@ -237,7 +237,7 @@ class UnifiedNovelEngine:
         使相邻发牌更符合语感。矩阵与 seed 无关（转移是结构性的），默认用 tiny 规模
         即可覆盖主要 queue_key；结果落盘到 matrix_path（默认 data/deal_transitions.json）。
         """
-        from novel_generator.engine.wordcount_director import PRESETS
+        from wanjie.engine.wordcount_director import PRESETS
         voice = self.integrated_gen._voice
         voice.begin_deal_recording()
         target = target_chars or PRESETS.get('tiny', 20000)

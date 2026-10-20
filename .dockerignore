@@ -21,8 +21,8 @@ venv/
 
 # Project outputs (generated at runtime)
 output/
-novel_generator/output/
-novel_generator/engine/output/
+wanjie/output/
+wanjie/engine/output/
 
 # Runtime state
 spec/tracking/

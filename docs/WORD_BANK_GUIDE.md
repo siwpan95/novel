@@ -4,7 +4,7 @@
 
 ## 词库文件结构
 
-所有词库存放在 `novel_generator/word_banks/` 目录，JSON 格式：
+所有词库存放在 `wanjie/word_banks/` 目录，JSON 格式：
 
 ```json
 {
@@ -55,14 +55,14 @@
 
 ### 2. 创建新词库
 
-1. 在 `novel_generator/word_banks/` 下创建新的 `.json` 文件
+1. 在 `wanjie/word_banks/` 下创建新的 `.json` 文件
 2. 使用标准词库结构（key → array of strings）
-3. 在 `novel_generator/engine/word_bank.py` 的 `WORD_BANK_DIR` 中确认路径设置正确
+3. 在 `wanjie/engine/word_bank.py` 的 `WORD_BANK_DIR` 中确认路径设置正确
 
 ### 3. 在代码中使用新词库
 
 ```python
-from novel_generator.engine.word_bank import WordBank
+from wanjie.engine.word_bank import WordBank
 
 wb = WordBank(seed=42)
 
@@ -125,4 +125,4 @@ template = "他手持[equipment.兵器]，步入了[locations.地标]。"
 
 ---
 
-> 更多细节见 `novel_generator/ARCHITECTURE.md` 和 `spec/Research-Report-Enhancement-Plan.md`。
+> 更多细节见 `wanjie/ARCHITECTURE.md` 和 `spec/Research-Report-Enhancement-Plan.md`。

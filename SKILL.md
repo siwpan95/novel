@@ -1,5 +1,5 @@
 ---
-name: novel-generator
+name: wanjie
 description: Maintain the 《万界归墟》 event-driven novel generator (以本 SKILL.md 所在仓库根为工作目录). World map + timeline + character simulation driven generation with task log.
 agent_created: true
 ---
@@ -11,7 +11,8 @@ agent_created: true
 
 ## 结构
 - main.py：CLI 入口（--preset/--target-chars/--seed/--resume/--mode/--diagnose/--tasks）
-- novel_generator/engine/：word_bank/plot_state/world_state/timeline/storyline/scene_director/integrated_chapter_generator/voice_engine
+- wanjie/engine/：word_bank/plot_state/world_state/timeline/storyline/scene_director/integrated_chapter_generator/voice_engine
+- wanjie/engine/word_bank.py、wanjie/engine/template.py：继承自通用内核 `novel_generator`（PyPI 依赖 `novel-generator>=2.0.0`），只覆写本仓专属部分；改通用逻辑请改内核仓，不要在这里复制一份
 - novellog.py：任务事件日志（<output>/pipeline.log，7 阶段事件）
 - verify_*.py：验证脚本族
 

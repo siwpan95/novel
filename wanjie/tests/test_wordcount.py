@@ -8,11 +8,11 @@
 """
 import os
 
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.engine.voice_engine import VoiceEngine
-from novel_generator.engine.emergent_orchestrator import EmergentOrchestrator
-from novel_generator.engine.wordcount_director import WordCountDirector, DEFAULT_WC_CONFIG
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.engine.voice_engine import VoiceEngine
+from wanjie.engine.emergent_orchestrator import EmergentOrchestrator
+from wanjie.engine.wordcount_director import WordCountDirector, DEFAULT_WC_CONFIG
 
 
 def _tiny_cfg(target: int = 400) -> dict:
@@ -51,7 +51,7 @@ class _MockGen:
         pass
 
     def _execute_operation(self, op, ctx):
-        from novel_generator.engine.beat_orchestrator import OpType
+        from wanjie.engine.beat_orchestrator import OpType
         lines = []
         world = getattr(ctx, 'world_name', '归墟')
         t = getattr(op, 'type', str(op))

@@ -7,11 +7,11 @@
 """
 import os
 
-from novel_generator.engine.word_bank import WordBank
-from novel_generator.engine.plot_state import PlotState
-from novel_generator.engine.voice_engine import VoiceEngine
-from novel_generator.engine.emergent_orchestrator import EmergentOrchestrator
-from novel_generator.engine.wordcount_director import WordCountDirector, DEFAULT_WC_CONFIG
+from wanjie.engine.word_bank import WordBank
+from wanjie.engine.plot_state import PlotState
+from wanjie.engine.voice_engine import VoiceEngine
+from wanjie.engine.emergent_orchestrator import EmergentOrchestrator
+from wanjie.engine.wordcount_director import WordCountDirector, DEFAULT_WC_CONFIG
 
 
 def _make_tiny_config(target: int = 500) -> dict:
@@ -229,7 +229,7 @@ class _MockGen:
         self._voice = voice
         self._ps = ps
         self._quality = _MockQuality()
-        from novel_generator.engine.beat_orchestrator import VoiceOperation, OpType
+        from wanjie.engine.beat_orchestrator import VoiceOperation, OpType
         self.VoiceOperation = VoiceOperation
         self.OpType = OpType
 
@@ -239,7 +239,7 @@ class _MockGen:
 
     def _execute_operation(self, op, ctx):
         """极简版：每个算子产出一行描述文本。"""
-        from novel_generator.engine.beat_orchestrator import OpType
+        from wanjie.engine.beat_orchestrator import OpType
         lines = []
         world = ctx.world_name if hasattr(ctx, 'world_name') else '归墟'
         t = op.type if hasattr(op, 'type') else str(op)

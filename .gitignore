@@ -19,8 +19,8 @@ ENV/
 
 # Project outputs
 output/
-novel_generator/output/
-novel_generator/engine/output/
+wanjie/output/
+wanjie/engine/output/
 
 # One-off data extraction tool
 extract_beat_texts.py
@@ -30,7 +30,7 @@ spec/tracking/plot_state.json
 
 # Logs
 *.log
-novel_generator.log
+wanjie.log
 
 # OS
 .DS_Store

@@ -3,23 +3,25 @@ requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["novel_generator*"]
+include = ["wanjie*"]
 
 [tool.setuptools.package-data]
-novel_generator = ["word_banks/**/*.json", "word_banks/**/*.md"]
+wanjie = ["word_banks/**/*.json", "word_banks/**/*.md"]
 
 [project]
-name = "novel-generator"
-version = "2.1.0"
-description = "双引擎程序化小说生成系统——《万界归墟》"
+name = "wanjie"
+version = "3.0.0"
+description = "双引擎程序化小说生成系统——《万界归墟》（内核依赖 novel-generator）"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
 authors = [
-    {name = "novel-generator contributors"}
+    {name = "wanjie contributors"}
 ]
 keywords = ["novel", "procedural-generation", "chinese-novel", "creative-writing"]
 dependencies = [
+    # ★ 通用内核：WordBank / TemplateEngine 的基类由它提供（PyPI: novel-generator）
+    "novel-generator>=2.0.0",
     "flask>=3.0",
     "waitress>=3.0",
 ]
@@ -36,7 +38,8 @@ classifiers = [
 ]
 
 [project.scripts]
-novel-gen = "novel_generator.__main__:main"
+# 注意：不能叫 novel-gen —— 该入口名已归内核 novel-generator 所有
+wanjie = "wanjie.__main__:main"
 
 [project.optional-dependencies]
 gui = [
@@ -62,13 +65,13 @@ select = ["E", "F", "W"]
 ignore = ["E402", "E501", "E701", "E702", "E741"]
 
 [tool.pytest.ini_options]
-testpaths = ["novel_generator/tests"]
+testpaths = ["wanjie/tests"]
 python_files = ["test_*.py"]
 addopts = "-v --tb=short"
 
 [tool.coverage.run]
-source = ["novel_generator"]
-omit = ["novel_generator/tests/*"]
+source = ["wanjie"]
+omit = ["wanjie/tests/*"]
 
 [tool.coverage.report]
 fail_under = 30
@@ -80,7 +83,7 @@ disallow_untyped_defs = false
 # suppress no_implicit_optional (project-wide, 30+ sites; requires Optional[X] refactor)
 implicit_optional = true
 # files to check
-files = ["novel_generator"]
+files = ["wanjie"]
 # strictness (incremental path to removing CI || true)
 disallow_incomplete_defs = false
 check_untyped_defs = false
